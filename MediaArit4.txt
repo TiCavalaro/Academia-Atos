@@ -1,0 +1,18 @@
+
+            String nome;
+            double a, b,c,d;
+            Console.WriteLine("Digite seu nome");
+            nome = Console.ReadLine();
+            Console.Write("Digite o primeiro numero ");
+            a = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o segundo numero ");
+            b = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o terceiro numero ");
+            c = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o qaurtto numero ");
+            d = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("ola " + nome +  "a  media aritmetica simples foi:  " + (a + b + c + d)/4);

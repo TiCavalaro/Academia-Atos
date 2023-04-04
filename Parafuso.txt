@@ -1,0 +1,35 @@
+   Console.WriteLine("Digite os dados do parafuso A:");
+            Console.Write("Codigo: ");
+            string cdA = Console.ReadLine();
+
+            Console.Write("Quantidade: ");
+            int qtA = int.Parse(Console.ReadLine());
+
+            Console.Write("Valor unitário: R$");
+            double vA = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("\nDados do parafuso B:");
+            Console.Write("Código: ");
+            string cdB = Console.ReadLine();
+
+            Console.Write("Quantidade de peças: ");
+            int qtB = int.Parse(Console.ReadLine());
+
+            Console.Write("Valor unitário: R$");
+            double vB = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("\nPorcentagem de IPI a ser acrescentada:");
+            double porcentagemIPI = double.Parse(Console.ReadLine());
+
+            double valorTotalA = qtA * vA;
+            double valorTotalB = qtB * vB;
+
+            double valorComIPIA = valorTotalA * (1 + porcentagemIPI / 100);
+            double valorComIPIB = valorTotalB * (1 + porcentagemIPI / 100);
+
+            Console.WriteLine($"\nValor total do parafuso A (sem IPI): " + valorTotalA);
+            Console.WriteLine($"Valor total do parafuso B (sem IPI): " + valorTotalB);
+            Console.WriteLine($"Valor total do parafuso A (com IPI): " + valorComIPIA);
+            Console.WriteLine($"Valor total do parafuso B (com IPI): " + valorComIPIB);
+
+            Console.ReadKey();

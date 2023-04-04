@@ -1,0 +1,14 @@
+             double a, b, c;
+            Console.Write("Digite o primeiro numero ");
+            a = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o segundo numero ");
+            b = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Os valores digitados em ordem foram: " + a + " e " + b);
+
+             c = a;
+             a = b;
+             b = c;
+
+             Console.WriteLine("Os valores digitados invertidos foram " + a + " e " + b);

@@ -1,0 +1,15 @@
+  Console.Write("Digite a data no formato DD/MM/AAAA: ");
+             string data = Console.ReadLine();
+
+            
+            string dia = data.Substring(0, 2);
+            string mes = data.Substring(3, 2);
+            string ano = data.Substring(6, 4);
+
+      
+            Console.WriteLine($"Data no formato AAAAMMDD:" +ano+ "/" + mes + "/" + dia);
+
+   
+             Console.WriteLine($"Data no formato AAMMDD:"+ ano.Substring(2)+ "/" + mes+ "/"+dia);
+
+             Console.ReadKey();
