@@ -1,0 +1,11 @@
+ 	    int i;
+            Console.WriteLine("Digite sua idade");
+            i = int.Parse(Console.ReadLine());
+
+            if(i>=18)
+            {
+                Console.WriteLine("Voce e maior de idade");
+            }else
+            {
+                Console.WriteLine("Voce e menor de idade");
+            }
