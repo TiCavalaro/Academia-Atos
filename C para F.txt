@@ -1,0 +1,5 @@
+      Console.Write("Digite os graus em C para descobrir em F ");
+            double c,f;
+            c = double.Parse(Console.ReadLine());
+            f = 1.8 * c + 32;
+            Console.WriteLine("De C para F seria: " + f);

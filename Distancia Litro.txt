@@ -1,15 +1,10 @@
- Console.Write("Digite a data no formato DD/MM/AAAA: ");
-            string data = Console.ReadLine();
+   Console.Write("Digite a distância percorrida total (em km): ");
+            double d = double.Parse(Console.ReadLine());
 
-            // Extrai o dia, mês e ano da string data
-            string dia = data.Substring(0, 2);
-            string mes = data.Substring(3, 2);
-            string ano = data.Substring(6, 4);
+            Console.Write("Digite o volume de combustível consumido: ");
+            double v = double.Parse(Console.ReadLine());
 
-            // Imprime a data no formato AAAAMMDD
-            Console.WriteLine($"Data no formato AAAAMMDD:" +ano+ "/" + mes + "/" + dia);
+            double consumo = d / v;
 
-            // Imprime a data no formato AAMMDD
-            Console.WriteLine($"Data no formato AAMMDD: {ano.Substring(2)}{mes}{dia}");
+            Console.WriteLine($"O consumo médio do automóvel é de {consumo} km/l.");
 
-            Console.ReadKey();

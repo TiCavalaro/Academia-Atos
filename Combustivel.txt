@@ -1,0 +1,21 @@
+ double Combu = 6.9;
+
+            Console.WriteLine("Informe a marcação no início do dia (em Km):");
+            double inicio = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Informe a marcação no final do dia (em Km):");
+            double final = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Informe o número de litros de combustível gasto no dia:");
+            double litros = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Informe o valor total recebido dos passageiros (R$):");
+            double total = double.Parse(Console.ReadLine());
+
+            double totalKm = final - inicio;
+            double media = totalKm / litros;
+            double totalC = litros * Combu;
+            double lucro = total - totalC;
+
+            Console.WriteLine("Média de consumo: " + media.ToString() + " Km/l");
+            Console.WriteLine("Lucro líquido: R$ " + lucro.ToString());

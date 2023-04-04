@@ -1,0 +1,21 @@
+  double elei, brancos, nulo, validos;
+
+            Console.Write("Digite o número de eleitores: ");
+            elei = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o número de votos brancos: ");
+            brancos = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o número de votos nulos: ");
+            nulo = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o número de votos válidos: ");
+            validos = double.Parse(Console.ReadLine());
+
+            double percBrancos = (brancos / elei) * 100;
+            double percNulos = (nulo / elei) * 100;
+            double percValidos = (validos / elei) * 100;
+
+            Console.WriteLine($"Percentual de votos brancos: {percBrancos}%");
+            Console.WriteLine($"Percentual de votos nulos: {percNulos}%");
+            Console.WriteLine($"Percentual de votos válidos: {percValidos}%");

@@ -1,0 +1,18 @@
+     int num;
+            double sal, total, perc, salarioTl;
+
+            Console.Write("Digite o número do vendedor: ");
+            num = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o salário fixo: R$ ");
+            sal = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o total de vendas: R$ ");
+            total = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite a comissão sobre as vendas (em %): ");
+            perc = double.Parse(Console.ReadLine());
+
+            salarioTl = sal + (total * perc / 100);
+
+            Console.WriteLine("O salário total do vendedor " + num + " é R$ " + salarioTl.ToString());

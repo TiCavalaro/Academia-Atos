@@ -1,0 +1,11 @@
+
+            double valor, entrada, prestacao;
+
+            Console.Write("Digite o valor da mercadoria: R$ ");
+            valor = double.Parse(Console.ReadLine());
+
+            entrada = Math.Ceiling(valor * 0.6); 
+            prestacao = Math.Ceiling((valor - entrada) / 2); 
+
+             Console.WriteLine("Valor da entrada: R$ " + entrada.ToString());
+             Console.WriteLine("Valor das duas prestações: R$ " + prestacao.ToString());
