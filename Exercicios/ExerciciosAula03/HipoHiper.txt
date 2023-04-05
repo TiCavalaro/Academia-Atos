@@ -1,0 +1,37 @@
+            double g1, g2, g3;
+
+            Console.Write("Digite o valor da primeira medição de glicemia em jejum: ");
+            g1 = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o valor da segunda medição de glicemia em jejum: ");
+            g2 = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o valor da terceira medição de glicemia em jejum: ");
+            g3 = double.Parse(Console.ReadLine());
+
+            if (g1 < 65)
+            {
+                Console.WriteLine("Atenção! Você corre risco de hipoglicemia na primeira medição.");
+            }
+            else if (g1 > 250)
+            {
+                Console.WriteLine("Atenção! Você corre risco de hiperglicemia na primeira medição.");
+            }
+
+            if (g2 < 65)
+            {
+                Console.WriteLine("Atenção! Você corre risco de hipoglicemia na segunda medição.");
+            }
+            else if (g2 > 250)
+            {
+                Console.WriteLine("Atenção! Você corre risco de hiperglicemia na segunda medição.");
+            }
+
+            if (g3 < 65)
+            {
+                Console.WriteLine("Atenção! Você corre risco de hipoglicemia na terceira medição.");
+            }
+            else if (g3 > 250)
+            {
+                Console.WriteLine("Atenção! Você corre risco de hiperglicemia na terceira medição.");
+            }

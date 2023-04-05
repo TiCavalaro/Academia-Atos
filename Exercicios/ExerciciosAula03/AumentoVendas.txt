@@ -1,0 +1,38 @@
+          int codigo;
+            string nome;
+            double salarioBase, totalVendas, salarioFinal;
+
+            Console.Write("Digite o código do funcionário: ");
+            codigo = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o nome do funcionário: ");
+            nome = Console.ReadLine();
+
+            Console.Write("Digite o salário base do funcionário: ");
+            salarioBase = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o total de vendas do funcionário: ");
+            totalVendas = double.Parse(Console.ReadLine());
+
+            salarioFinal = salarioBase;
+
+            if (totalVendas > 500)
+            {
+                salarioFinal += totalVendas * 0.05;
+            }
+
+            if (totalVendas > 1000)
+            {
+                salarioFinal += totalVendas * 0.07;
+            }
+
+            if (totalVendas > 5000)
+            {
+                salarioFinal += totalVendas * 0.1;
+            }
+
+            Console.WriteLine("Código do funcionário: " + codigo);
+            Console.WriteLine("Nome do funcionário: " + nome);
+            Console.WriteLine("Salário base do funcionário: " + salarioBase.ToString("F2"));
+            Console.WriteLine("Total de vendas do funcionário: " + totalVendas.ToString("F2"));
+            Console.WriteLine("Salário final do funcionário: " + salarioFinal.ToString("F2"));

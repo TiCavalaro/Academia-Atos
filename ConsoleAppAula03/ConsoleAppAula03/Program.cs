@@ -174,39 +174,209 @@
             //        }
             //}
 
-            string nome;
-            double alt, peso, imc;
+            //string nome;
+            //double alt, peso, imc;
 
-            Console.Write("Digite a altura da pessoa em metros: ");
-            alt = double.Parse(Console.ReadLine());
+            //Console.Write("Digite a altura da pessoa em metros: ");
+            //alt = double.Parse(Console.ReadLine());
 
-            Console.Write("Digite o peso da pessoa em kg: ");
-            peso = double.Parse(Console.ReadLine());
+            //Console.Write("Digite o peso da pessoa em kg: ");
+            //peso = double.Parse(Console.ReadLine());
 
-            imc = peso / (alt * alt);
+            //imc = peso / (alt * alt);
 
-            Console.WriteLine(" seu IMC é" + imc);
+            //Console.WriteLine(" seu IMC é" + imc);
 
-            if (imc < 18)
-            {
-                Console.WriteLine("Baixo peso");
-            }
-            else if (imc < 25)
-            {
-                Console.WriteLine("Peso normal");
-            }
-            else if (imc < 30)
-            {
-                Console.WriteLine("Sobrepeso");
-            }
-            else if (imc < 35)
-            {
-                Console.WriteLine("Obesidade");
-            }
-            else
-            {
-                Console.WriteLine("Obesidade grau sério");
-            }
+            //if (imc < 18)
+            //{
+            //    Console.WriteLine("Baixo peso");
+            //}
+            //else if (imc < 25)
+            //{
+            //    Console.WriteLine("Peso normal");
+            //}
+            //else if (imc < 30)
+            //{
+            //    Console.WriteLine("Sobrepeso");
+            //}
+            //else if (imc < 35)
+            //{
+            //    Console.WriteLine("Obesidade");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Obesidade grau sério");
+            //}
+            //Console.Write("Digite um número inteiro: ");
+            //int num = int.Parse(Console.ReadLine());
+
+            //if (num % 2 == 0)
+            //{
+            //    Console.WriteLine("O número é par.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("O número é ímpar.");
+            //}
+
+            //Console.ReadKey();
+
+            //string frase, palavra;
+            //bool encontrou = false;
+
+            //Console.Write("Digite uma frase grande: ");
+            //frase = Console.ReadLine();
+
+            //Console.Write("Digite uma palavra para ver se estava na frase: ");
+            //palavra = Console.ReadLine();
+
+            //string[] palavras = frase.Split(' ');
+
+            //// Buscando a palavra
+            //foreach (string p in palavras)
+            //{
+            //    if (p == palavra)
+            //    {
+            //        encontrou = true;
+            //        break;
+            //    }
+            //}
+            //if (encontrou)
+            //{
+            //    Console.WriteLine("A palavra " + palavra + " se encontra na frase.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("A palavra " + palavra + " não se encontra na frase.");
+            //}
+
+            //int codigo;
+            //string nome;
+            //double salarioBase, totalVendas, salarioFinal;
+
+            //Console.Write("Digite o código do funcionário: ");
+            //codigo = int.Parse(Console.ReadLine());
+
+            //Console.Write("Digite o nome do funcionário: ");
+            //nome = Console.ReadLine();
+
+            //Console.Write("Digite o salário base do funcionário: ");
+            //salarioBase = double.Parse(Console.ReadLine());
+
+            //Console.Write("Digite o total de vendas do funcionário: ");
+            //totalVendas = double.Parse(Console.ReadLine());
+
+            //salarioFinal = salarioBase;
+
+            //if (totalVendas > 500)
+            //{
+            //    salarioFinal += totalVendas * 0.05;
+            //}
+
+            //if (totalVendas > 1000)
+            //{
+            //    salarioFinal += totalVendas * 0.07;
+            //}
+
+            //if (totalVendas > 5000)
+            //{
+            //    salarioFinal += totalVendas * 0.1;
+            //}
+
+            //Console.WriteLine("Código do funcionário: " + codigo);
+            //Console.WriteLine("Nome do funcionário: " + nome);
+            //Console.WriteLine("Salário base do funcionário: " + salarioBase.ToString("F2"));
+            //Console.WriteLine("Total de vendas do funcionário: " + totalVendas.ToString("F2"));
+            //Console.WriteLine("Salário final do funcionário: " + salarioFinal.ToString("F2"));
+
+            //double g1, g2, g3;
+
+            //Console.Write("Digite o valor da primeira medição de glicemia em jejum: ");
+            //g1 = double.Parse(Console.ReadLine());
+
+            //Console.Write("Digite o valor da segunda medição de glicemia em jejum: ");
+            //g2 = double.Parse(Console.ReadLine());
+
+            //Console.Write("Digite o valor da terceira medição de glicemia em jejum: ");
+            //g3 = double.Parse(Console.ReadLine());
+
+            //if (g1 < 65)
+            //{
+            //    Console.WriteLine("Atenção! Você corre risco de hipoglicemia na primeira medição.");
+            //}
+            //else if (g1 > 250)
+            //{
+            //    Console.WriteLine("Atenção! Você corre risco de hiperglicemia na primeira medição.");
+            //}
+
+            //if (g2 < 65)
+            //{
+            //    Console.WriteLine("Atenção! Você corre risco de hipoglicemia na segunda medição.");
+            //}
+            //else if (g2 > 250)
+            //{
+            //    Console.WriteLine("Atenção! Você corre risco de hiperglicemia na segunda medição.");
+            //}
+
+            //if (g3 < 65)
+            //{
+            //    Console.WriteLine("Atenção! Você corre risco de hipoglicemia na terceira medição.");
+            //}
+            //else if (g3 > 250)
+            //{
+            //    Console.WriteLine("Atenção! Você corre risco de hiperglicemia na terceira medição.");
+            //}
+
+            // Declaração das variáveis para o primeiro atleta
+            //string n1;
+            //int id1;
+            //double altura1;
+
+            //// Leitura dos dados do primeiro atleta
+            //Console.WriteLine("Digite os dados do primeiro atleta:");
+            //Console.Write("Nome: ");
+            //n1 = Console.ReadLine();
+            //Console.Write("Idade: ");
+            //id1 = int.Parse(Console.ReadLine());
+            //Console.Write("Altura: ");
+            //altura1 = double.Parse(Console.ReadLine());
+
+            //string n2;
+            //int id2;
+            //double altura2;
+
+            //Console.WriteLine("Digite os dados do segundo atleta:");
+            //Console.Write("Nome: ");
+            //n2 = Console.ReadLine();
+            //Console.Write("Idade: ");
+            //id2 = int.Parse(Console.ReadLine());
+            //Console.Write("Altura: ");
+            //altura2 = double.Parse(Console.ReadLine());
+
+            //string maisNovo;
+            //if (id1 < id2)
+            //{
+            //    maisNovo = n1;
+            //}
+            //else
+            //{
+            //    maisNovo = n2;
+            //}
+
+            //// Verificação do atleta mais alto
+            //string maisAlto;
+            //if (altura1 > altura2)
+            //{
+            //    maisAlto = n1;
+            //}
+            //else
+            //{
+            //    maisAlto = n2;
+            //}
+
+            //// Impressão dos resultados
+            //Console.WriteLine("O atleta mais novo é: " + maisNovo);
+            //Console.WriteLine("O atleta mais alto é: " + maisAlto);
         }
     }
 }
