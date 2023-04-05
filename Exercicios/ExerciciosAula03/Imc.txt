@@ -1,0 +1,34 @@
+
+            string nome;
+            double alt, peso, imc;
+
+            Console.Write("Digite a altura da pessoa em metros: ");
+            alt = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o peso da pessoa em kg: ");
+            peso = double.Parse(Console.ReadLine());
+
+            imc = peso / (alt * alt);
+
+            Console.WriteLine(" seu IMC é" + imc);
+
+            if (imc < 18)
+            {
+                Console.WriteLine("Baixo peso");
+            }
+            else if (imc < 25)
+            {
+                Console.WriteLine("Peso normal");
+            }
+            else if (imc < 30)
+            {
+                Console.WriteLine("Sobrepeso");
+            }
+            else if (imc < 35)
+            {
+                Console.WriteLine("Obesidade");
+            }
+            else
+            {
+                Console.WriteLine("Obesidade grau sério");
+            }

@@ -1,0 +1,36 @@
+            double n1, n2;
+            double media, exam;
+
+            Console.Write("Digite a primeira nota: ");
+            n1 = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite a segunda nota: ");
+            n2 = double.Parse(Console.ReadLine());
+
+            media = (n1 + n2) / 2;
+
+            if (media > 7)
+            {
+                Console.Write("Aluno aprovado ");
+
+
+            }
+            else
+            {
+                Console.Write("Aluno reprovado ");
+                Console.Write("Digite a nota do exame ");
+                exam = double.Parse(Console.ReadLine());
+
+                media = (exam + (n1 + n2)/2)/2;
+                   if (exam>=5){
+
+
+                    Console.Write("Aluno aprovado ");
+
+                    }
+                    else
+                    {
+                        Console.Write("Aluno reprovado em definitivo ");
+
+                    }
+            }

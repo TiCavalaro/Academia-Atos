@@ -1,0 +1,41 @@
+double v1, v2, v3, v4;
+            double media, soma;
+
+            Console.WriteLine(Digite o primeiro );
+            v1 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine(Digite o segundo );
+            v2 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine(Digite o terceiro );
+            v3 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine(Digite o quarto );
+            v4 = double.Parse(Console.ReadLine());
+
+            soma = v1 + v2 + v3 + v4;
+            media = soma  4;
+
+            Console.WriteLine(A média dos valores é  + media);
+
+            Console.WriteLine(Valores acima da média);
+
+            if (v1  media)
+            {
+                Console.WriteLine(v1);
+            }
+
+            if (v2  media)
+            {
+                Console.WriteLine(v2);
+            }
+
+            if (v3  media)
+            {
+                Console.WriteLine(v3);
+            }
+
+            if (v4  media)
+            {
+                Console.WriteLine(v4);
+            }
