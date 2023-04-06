@@ -1,0 +1,44 @@
+
+            double num1, num2, result;
+            char i;
+
+            Console.WriteLine("Calculadora");
+
+            Console.Write("Escolha um numero : ");
+            num1 = double.Parse(Console.ReadLine());
+
+            Console.Write("Escolha uma opcao (+, -, *, /): ");
+            i = char.Parse(Console.ReadLine());
+
+            Console.Write("Escolha outro numero: ");
+            num2 = double.Parse(Console.ReadLine());
+
+            switch (i)
+            {
+                case '+':
+                    result = num1 + num2;
+                    Console.WriteLine($"{num1} + {num2} = {result}");
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    Console.WriteLine($"{num1} - {num2} = {result}");
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    Console.WriteLine($"{num1} * {num2} = {result}");
+                    break;
+                case '/':
+                    if (num2 == 0)
+                    {
+                        Console.WriteLine("Nao pode ser divido por 0");
+                    }
+                    else
+                    {
+                        result = num1 / num2;
+                        Console.WriteLine($"{num1} / {num2} = {result}");
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Operacao invalida");
+                    break;
+            }

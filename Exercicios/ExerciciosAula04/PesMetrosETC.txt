@@ -1,0 +1,58 @@
+       Console.WriteLine("Selecione a unidade de medida de entrada:");
+            Console.WriteLine("1 - Metros");
+            Console.WriteLine("2 - Centímetros");
+            Console.WriteLine("3 - Polegadas");
+            Console.WriteLine("4 - Pés");
+
+            int unidadeEntrada = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Selecione a unidade de medida de saída:");
+            Console.WriteLine("1 - Metros");
+            Console.WriteLine("2 - Centímetros");
+            Console.WriteLine("3 - Polegadas");
+            Console.WriteLine("4 - Pés");
+
+            int unidadeSaida = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o valor a ser convertido:");
+            double valorEntrada = double.Parse(Console.ReadLine());
+
+            double valorSaida = valorEntrada;
+
+            switch (unidadeEntrada)
+            {
+                case 1:
+                    valorSaida *= 100;
+                    break;
+                case 2: 
+                    break;
+                case 3:
+                    valorSaida *= 2.54;
+                    break;
+                case 4: 
+                    valorSaida *= 30.48;
+                    break;
+                default:
+                    Console.WriteLine("Unidade de medida de entrada inválida.");
+                    return;
+            }
+
+            switch (unidadeSaida)
+            {
+                case 1: 
+                    valorSaida /= 100;
+                    break;
+                case 2: 
+                    break;
+                case 3: 
+                    valorSaida /= 2.54;
+                    break;
+                case 4: 
+                    valorSaida /= 30.48;
+                    break;
+                default:
+                    Console.WriteLine("Unidade de medida de saída inválida.");
+                    return;
+            }
+
+            Console.WriteLine($"Valor convertido: {valorSaida} {(unidadeSaida == 2 ? "cm" : unidadeSaida == 3 ? "pol" : unidadeSaida == 4 ? "pés" : "m")}");

@@ -1,0 +1,7 @@
+ 	    int codigo = int.Parse(Console.ReadLine());
+            int horas = int.Parse(Console.ReadLine());
+            double salario = horas * 10;
+            double extra = (horas > 50) ? (horas - 50) * 20 : 0;
+            salario += extra;
+            Console.WriteLine("Salário do operário " + codigo + ": R$ " + salario.ToString("F2"));
+            Console.WriteLine("Salário excedente do operário " + codigo + ": R$ " + extra.ToString("F2"));

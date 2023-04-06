@@ -1,0 +1,11 @@
+ 	    const int LITROS_POR_LATA = 18;
+            const double PRECO_POR_LATA = 80.0;
+
+            Console.Write("Digite o tamanho da área a ser pintada em metros quadrados: ");
+            double tamanhoArea = double.Parse(Console.ReadLine());
+
+            int quantidadeLatas = (int)Math.Ceiling(tamanhoArea / 3 / LITROS_POR_LATA);
+            double precoTotal = quantidadeLatas * PRECO_POR_LATA;
+
+            Console.WriteLine($"Quantidade de latas de tinta: {quantidadeLatas}");
+            Console.WriteLine($"Preço total: R$ {precoTotal:F2}");

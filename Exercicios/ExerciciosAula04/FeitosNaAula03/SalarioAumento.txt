@@ -1,0 +1,18 @@
+double sal;
+
+            Console.Write("Digite o salário fixo: R$ ");
+            sal = double.Parse(Console.ReadLine());
+            if (sal <= 900)
+            {
+                Console.Write("O salario " + sal+ " mais 5%: " + sal*1.05 + " R$ ");
+
+            }else if (sal>900 && sal < 1400)
+            {
+                Console.Write("O salario: " + sal + " mais 8%: " + sal * 1.08 + " R$ ");
+
+            }
+            else
+            {
+                Console.Write("O salario: " + sal + " mais 10%: " +  sal * 1.10 + " R$ ");
+
+            }

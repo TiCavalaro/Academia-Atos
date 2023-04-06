@@ -1,0 +1,49 @@
+            string n1;
+            int id1;
+            double altura1;
+
+            // Leitura dos dados do primeiro atleta
+            Console.WriteLine("Digite os dados do primeiro atleta:");
+            Console.Write("Nome: ");
+            n1 = Console.ReadLine();
+            Console.Write("Idade: ");
+            id1 = int.Parse(Console.ReadLine());
+            Console.Write("Altura: ");
+            altura1 = double.Parse(Console.ReadLine());
+
+            string n2;
+            int id2;
+            double altura2;
+
+            Console.WriteLine("Digite os dados do segundo atleta:");
+            Console.Write("Nome: ");
+            n2 = Console.ReadLine();
+            Console.Write("Idade: ");
+            id2 = int.Parse(Console.ReadLine());
+            Console.Write("Altura: ");
+            altura2 = double.Parse(Console.ReadLine());
+
+            string maisNovo;
+            if (id1 < id2)
+            {
+                maisNovo = n1;
+            }
+            else
+            {
+                maisNovo = n2;
+            }
+
+            // Verificação do atleta mais alto
+            string maisAlto;
+            if (altura1 > altura2)
+            {
+                maisAlto = n1;
+            }
+            else
+            {
+                maisAlto = n2;
+            }
+
+            // Impressão dos resultados
+            Console.WriteLine("O atleta mais novo é: " + maisNovo);
+            Console.WriteLine("O atleta mais alto é: " + maisAlto);

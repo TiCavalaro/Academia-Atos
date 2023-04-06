@@ -1,0 +1,12 @@
+Console.Write("Digite o primeiro valor: ");
+int a = int.Parse(Console.ReadLine());
+
+Console.Write("Digite o segundo valor: ");
+int b = int.Parse(Console.ReadLine());
+
+Console.Write("Digite o terceiro valor: ");
+int c = int.Parse(Console.ReadLine());
+
+int maior = a > b ? (a > c ? a : c) : (b > c ? b : c);
+
+Console.WriteLine($"O maior valor é {maior}");

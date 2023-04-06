@@ -1,0 +1,20 @@
+            Console.Write("Digite o lado a do triângulo: ");
+            double a = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o lado b do triângulo: ");
+            double b = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o lado c do triângulo: ");
+            double c = double.Parse(Console.ReadLine());
+
+            if (a + b > c && a + c > b && b + c > a)
+            {
+                if (a == b && b == c)
+                    Console.WriteLine("O triângulo é equilátero.");
+                else if (a == b || a == c || b == c)
+                    Console.WriteLine("O triângulo é isósceles.");
+                else
+                    Console.WriteLine("O triângulo é escaleno.");
+            }
+            else
+                Console.WriteLine("Os lados informados não formam um triângulo.");

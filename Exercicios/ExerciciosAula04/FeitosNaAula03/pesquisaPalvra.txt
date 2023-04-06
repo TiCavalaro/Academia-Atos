@@ -1,0 +1,28 @@
+          string frase, palavra;
+            bool encontrou = false;
+
+            Console.Write("Digite uma frase grande: ");
+            frase = Console.ReadLine();
+
+            Console.Write("Digite uma palavra para ver se estava na frase: ");
+            palavra = Console.ReadLine();
+
+            string[] palavras = frase.Split(' ');
+
+            // Buscando a palavra
+            foreach (string p in palavras)
+            {
+                if (p == palavra)
+                {
+                    encontrou = true;
+                    break;
+                }
+            }
+            if (encontrou)
+            {
+                Console.WriteLine("A palavra " + palavra + " se encontra na frase.");
+            }
+            else
+            {
+                Console.WriteLine("A palavra " + palavra + " não se encontra na frase.");
+            }

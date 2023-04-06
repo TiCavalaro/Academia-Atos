@@ -1,0 +1,8 @@
+           Console.Write("Digite a hora: ");
+            int hora = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite os minutos: ");
+            int minutos = int.Parse(Console.ReadLine());
+
+            string mensagem = (hora >= 0 && hora <= 23 && minutos >= 0 && minutos <= 59) ? "Hora válida." : "Hora inválida.";
+            Console.WriteLine(mensagem);

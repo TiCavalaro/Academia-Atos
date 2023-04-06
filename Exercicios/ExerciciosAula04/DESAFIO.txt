@@ -1,0 +1,32 @@
+ 	    Random rand = new Random();
+            int secreto = rand.Next(1, 11); 
+            int tentativa = 3; 
+            int palpite = 0;
+
+            Console.WriteLine("Bem-vindo ao jogo de adivinhação do número secreto!");
+            Console.WriteLine("Você tem 3 tentativas para adivinhar o número secreto, que está entre 1 e 10.");
+            Console.WriteLine();
+
+            while (tentativa > 0)
+            {
+                Console.Write("Tentativa " +tentativa + " Digite um número: ", 4 - tentativa);
+                palpite = int.Parse(Console.ReadLine());
+
+                if (palpite == secreto)
+                {
+                    Console.WriteLine("Parabéns! Você acertou o número secreto!");
+                    return; 
+                }
+                else if (palpite < secreto)
+                {
+                    Console.WriteLine("O número secreto é maior.");
+                }
+                else
+                {
+                    Console.WriteLine("O número secreto é menor.");
+                }
+
+                tentativa--;
+            }
+
+            Console.WriteLine("Suas tentativas acabaram. O número secreto era " + secreto);

@@ -1,0 +1,8 @@
+ 	   Console.Write("Digite o tamanho do arquivo em MB: ");
+            double tamanhoArquivo = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite a velocidade da conexão de Internet em Mbps: ");
+            double velocidadeInternet = double.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Tempo aproximado de download: {(tamanhoArquivo * 8) / (velocidadeInternet * 60):F2} minutos");
+        }

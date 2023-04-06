@@ -1,0 +1,28 @@
+Console.WriteLine("Digite o valor do primeiro lado 1:");
+            double a = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o valor do segundo lado 2");
+            double b = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o valor do terceiro lado 3:");
+            double c = double.Parse(Console.ReadLine());
+
+            if (a < b + c && b < a + c && c < a + b)
+            {
+                if (a == b && b == c)
+                {
+                    Console.WriteLine("Triangulo equilatero");
+                }
+                else if (a == b || a == c || b == c)
+                {
+                    Console.WriteLine("Triangulo isosceles");
+                }
+                else
+                {
+                    Console.WriteLine("Triangulo escaleno");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Triangulo inexistente.");
+            }

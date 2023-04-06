@@ -1,0 +1,28 @@
+            Console.Write("Digite o placar do time da casa: ");
+            int placar_casa = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o placar do time de fora: ");
+            int placar_fora = int.Parse(Console.ReadLine());
+
+            if (placar_fora > placar_casa + 2)
+            {
+                Console.WriteLine("O time de fora já se classificou.");
+            }
+            else
+            {
+                Console.Write("Digite o placar do time da casa no segundo jogo: ");
+                int placar_casa2 = int.Parse(Console.ReadLine());
+
+                Console.Write("Digite o placar do time de fora no segundo jogo: ");
+                int placar_fora2 = int.Parse(Console.ReadLine());
+
+                if (placar_casa2 + placar_fora2 > 2)
+                {
+                    Console.WriteLine("O time de fora passou de fase.");
+                }
+                else
+                {
+                    Console.WriteLine("Os times terão que jogar mais uma vez.");
+                }
+
+            }

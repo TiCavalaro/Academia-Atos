@@ -1,0 +1,16 @@
+
+            Console.WriteLine("Digite o valor da base: ");
+            double baseTriangulo = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o valor da altura: ");
+            double alturaTriangulo = double.Parse(Console.ReadLine());
+
+            if (baseTriangulo == 0 || alturaTriangulo == 0)
+            {
+                Console.WriteLine("A base ou a altura não podem ser iguais a zero!");
+            }
+            else
+            {
+                double areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
+                Console.WriteLine("A área do triângulo é: " + areaTriangulo);
+            }
