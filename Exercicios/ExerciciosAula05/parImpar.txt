@@ -1,0 +1,19 @@
+	   int numpares = 0;
+            int numImp = 0;
+
+            for (int i = 1; i <= 20; i++)
+            {
+                Console.Write($"Digite o "  + i + " número: ");
+                int num = int.Parse(Console.ReadLine());
+
+                if (num % 2 == 0)
+                {
+                    numpares++;
+                }
+                else
+                {
+                    numImp++;
+                }
+            }
+
+            Console.WriteLine($"Foram digitados " + numpares + " números pares e " + numImp + " números ímpares.");

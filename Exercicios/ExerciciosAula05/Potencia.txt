@@ -1,0 +1,13 @@
+            Console.Write("Digite o valor de x: ");
+            int x = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o valor de y: ");
+            int y = int.Parse(Console.ReadLine());
+
+            int potencia = 1;
+            for (int i = 1; i <= y; i++)
+            {
+                potencia *= x;
+            }
+
+            Console.WriteLine(x + " elevado a " + y + " = " + potencia);

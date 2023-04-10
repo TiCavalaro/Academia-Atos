@@ -1,0 +1,19 @@
+            Console.Write("Digite o número de alunos ");
+            int alunos = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite a quantidade de avaliações");
+            int numAvaliacoes = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= alunos; i++)
+            {
+                double somaNotas = 0;
+                for (int j = 1; j <= numAvaliacoes; j++)
+                {
+                    Console.Write($"Digite a nota da avaliação " + j + " do aluno  " + i);
+                    double nota = double.Parse(Console.ReadLine());
+                    somaNotas += nota;
+                }
+                double media = somaNotas / numAvaliacoes;
+                Console.WriteLine($"A nota final do aluno {i} é {media}");
+
+            }

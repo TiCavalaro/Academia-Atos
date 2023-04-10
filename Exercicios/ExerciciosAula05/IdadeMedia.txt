@@ -1,0 +1,15 @@
+            int n;
+            double soma = 0;
+
+            Console.Write("Digite o número de pessoas: ");
+            n = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= n; i++)
+            {
+                Console.Write($"Digite a idade da pessoa " + i);
+                int idade = int.Parse(Console.ReadLine());
+                soma += idade;
+            }
+
+            double media = soma / n;
+            Console.WriteLine($"A média de idade das " + n + "  pessoas é: " + media );
