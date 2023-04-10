@@ -1,0 +1,15 @@
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\bin\Debug\net6.0\ConsoleAppAula05.exe
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\bin\Debug\net6.0\ConsoleAppAula05.deps.json
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\bin\Debug\net6.0\ConsoleAppAula05.runtimeconfig.json
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\bin\Debug\net6.0\ConsoleAppAula05.dll
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\bin\Debug\net6.0\ConsoleAppAula05.pdb
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\obj\Debug\net6.0\ConsoleAppAula05.csproj.AssemblyReference.cache
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\obj\Debug\net6.0\ConsoleAppAula05.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\obj\Debug\net6.0\ConsoleAppAula05.AssemblyInfoInputs.cache
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\obj\Debug\net6.0\ConsoleAppAula05.AssemblyInfo.cs
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\obj\Debug\net6.0\ConsoleAppAula05.csproj.CoreCompileInputs.cache
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\obj\Debug\net6.0\ConsoleAppAula05.dll
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\obj\Debug\net6.0\refint\ConsoleAppAula05.dll
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\obj\Debug\net6.0\ConsoleAppAula05.pdb
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\obj\Debug\net6.0\ConsoleAppAula05.genruntimeconfig.cache
+C:\Users\João\source\repos\ConsoleAppAula05\ConsoleAppAula05\obj\Debug\net6.0\ref\ConsoleAppAula05.dll

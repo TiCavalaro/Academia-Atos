@@ -1,17 +1,17 @@
-Console.Write(Digite o primeiro valor );
-int a = int.Parse(Console.ReadLine());
+            Console.Write("Digite o primeiro valor");
+            int a = int.Parse(Console.ReadLine());
 
-Console.Write(Digite o segundo valor );
-int b = int.Parse(Console.ReadLine());
+            Console.Write("Digite o segundo valor");
+            int b = int.Parse(Console.ReadLine());
 
-Console.Write(Digite o terceiro valor );
-int c = int.Parse(Console.ReadLine());
+            Console.Write("Digite o terceiro valor");
+            int c = int.Parse(Console.ReadLine());
 
-Listint valores = new Listint { a, b, c };
-valores.Sort();
+            Listint valores = new Listint { a, b, c };
+            valores.Sort();
 
-Console.WriteLine(Os valores em ordem crescente são);
-foreach (int valor in valores)
-{
-    Console.WriteLine(valor);
-}
+            Console.WriteLine("Os valores em ordem crescente são");
+            foreach (int valor in valores)
+            {
+                Console.WriteLine(valor);
+            }
