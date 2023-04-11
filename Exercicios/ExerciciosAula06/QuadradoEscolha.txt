@@ -1,0 +1,9 @@
+            Console.Write("Digite a base: ");
+            double baseNum = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o expoente: ");
+            double expoente = double.Parse(Console.ReadLine());
+
+            double resultado = Math.Pow(baseNum, expoente);
+
+            Console.WriteLine("{0} elevado a {1} é igual a {2}", baseNum, expoente, resultado);

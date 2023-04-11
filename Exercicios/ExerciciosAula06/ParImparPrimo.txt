@@ -1,0 +1,32 @@
+         int numero;
+
+            while (true)
+            {
+                Console.Write("Digite um número (0 para sair): ");
+                if (!int.TryParse(Console.ReadLine(), out numero))
+                {
+                    Console.WriteLine("Entrada inválida. Tente novamente.");
+                    continue;
+                }
+
+                if (numero == 0)
+                {
+                    break;
+                }
+
+                Console.WriteLine($"O número {numero} é {(numero % 2 == 0 ? "par" : "ímpar")}.");
+
+                bool ehPrimo = true;
+                for (int i = 2; i < numero; i++)
+                {
+                    if (numero % i == 0)
+                    {
+                        ehPrimo = false;
+                        break;
+                    }
+                }
+
+                Console.WriteLine($"O número {numero} é {(ehPrimo ? "primo" : "não primo")}.");
+            }
+
+            Console.WriteLine("Programa encerrado.");

@@ -1,0 +1,40 @@
+     int pessoasCom1a3Filhos = 0;
+            int pessoasCom4a7Filhos = 0;
+            int pessoasComMaisDe8Filhos = 0;
+            int pessoasSemFilhos = 0;
+
+            for (int i = 1; i <= 30; i++)
+            {
+                Console.Write($"Quantos filhos a pessoa {i} tem? ");
+                int numFilhos;
+                while (!int.TryParse(Console.ReadLine(), out numFilhos) || numFilhos < 0)
+                {
+                    Console.Write("Quantidade inválida. Informe novamente: ");
+                }
+
+                if (numFilhos >= 1 && numFilhos <= 3)
+                {
+                    pessoasCom1a3Filhos++;
+                }
+                else if (numFilhos >= 4 && numFilhos <= 7)
+                {
+                    pessoasCom4a7Filhos++;
+                }
+                else if (numFilhos > 8)
+                {
+                    pessoasComMaisDe8Filhos++;
+                }
+                else if (numFilhos == 0)
+                {
+                    pessoasSemFilhos++;
+                }
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine($"Quantidade de pessoas com 1 a 3 filhos: {pessoasCom1a3Filhos}");
+            Console.WriteLine($"Quantidade de pessoas com 4 a 7 filhos: {pessoasCom4a7Filhos}");
+            Console.WriteLine($"Quantidade de pessoas com mais de 8 filhos: {pessoasComMaisDe8Filhos}");
+            Console.WriteLine($"Quantidade de pessoas sem filhos: {pessoasSemFilhos}");

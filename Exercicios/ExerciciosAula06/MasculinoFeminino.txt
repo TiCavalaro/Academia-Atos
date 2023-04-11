@@ -1,0 +1,56 @@
+             int masculino = 0, feminino = 0, idadeTotalMulheres = 0, abaixo30 = 0, acima60 = 0;
+                    double mediaIdadeMulheres = 0;
+
+                    for (int i = 1; i <= 50; i++)
+                    {
+                        Console.WriteLine($"Digite as informações da {i}ª pessoa:");
+                        Console.Write("Nome: ");
+                        string nome = Console.ReadLine();
+
+                        Console.Write("Sexo (M/F): ");
+                        char sexo = Console.ReadKey().KeyChar;
+                        Console.WriteLine();
+
+                        Console.Write("Idade: ");
+                        int idade;
+                        while (!int.TryParse(Console.ReadLine(), out idade) || idade <= 0)
+                        {
+                            Console.WriteLine("Idade inválida. Digite novamente.");
+                            Console.Write("Idade: ");
+                        }
+
+                        if (sexo == 'M' || sexo == 'm')
+                        {
+                            masculino++;
+                        }
+                        else if (sexo == 'F' || sexo == 'f')
+                        {
+                            feminino++;
+                            idadeTotalMulheres += idade;
+                        }
+
+                        if (idade < 30)
+                        {
+                            abaixo30++;
+                        }
+                        else if (idade > 60)
+                        {
+                            acima60++;
+                        }
+                    }
+
+                    if (feminino > 0)
+                    {
+                        mediaIdadeMulheres = idadeTotalMulheres / (double)feminino;
+                    }
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+                    Console.WriteLine($"Número de pessoas do sexo masculino: {masculino}");
+                    Console.WriteLine($"Número de pessoas do sexo feminino: {feminino}");
+                    Console.WriteLine($"Número de pessoas com idade inferior a 30 anos: {abaixo30}");
+                    Console.WriteLine($"Número de pessoas com idade superior a 60 anos: {acima60}");
+                    Console.WriteLine($"Média de idade das mulheres: {mediaIdadeMulheres:F2}");
+
+                    Console.ReadKey();

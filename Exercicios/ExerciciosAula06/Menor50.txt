@@ -1,0 +1,13 @@
+           int n;
+            do
+            {
+                Console.Write("Digite um número inteiro menor ou igual a 50: ");
+            } while (!int.TryParse(Console.ReadLine(), out n) || n > 50);
+
+            int produto = n;
+
+            while (produto < 250)
+            {
+                Console.WriteLine(produto);
+                produto *= 3;
+            }

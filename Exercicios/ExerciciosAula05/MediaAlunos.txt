@@ -14,6 +14,6 @@
                     somaNotas += nota;
                 }
                 double media = somaNotas / numAvaliacoes;
-                Console.WriteLine($"A nota final do aluno {i} é {media}");
+                Console.WriteLine("A nota final do aluno " + i + " é " + media);
 
             }

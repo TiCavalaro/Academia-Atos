@@ -1,0 +1,41 @@
+ string nome;
+            int idade;
+            double salario;
+
+            do
+            {
+                Console.Write("Digite o nome: ");
+                nome = Console.ReadLine();
+                if (string.IsNullOrEmpty(nome) || int.TryParse(nome, out _))
+                {
+                    Console.WriteLine("Nome incorreto. Tente novamente.");
+                    return;
+                }
+            } while (string.IsNullOrEmpty(nome));
+
+            // Solicita a idade, testando se o valor informado é válido
+            do
+            {
+                Console.Write("Digite a idade: ");
+                if (!int.TryParse(Console.ReadLine(), out idade) || idade <= 0)
+                {
+                    Console.WriteLine("Idade incorreta. Tente novamente.");
+                    return;
+                }
+            } while (idade <= 0);
+
+            // Solicita o salário, testando se o valor informado é válido
+            do
+            {
+                Console.Write("Digite o salário: ");
+                if (!double.TryParse(Console.ReadLine(), out salario) || salario <= 0)
+                {
+                    Console.WriteLine("Salário incorreto. Tente novamente.");
+                    return;
+                }
+            } while (salario <= 0);
+
+            // Exibe as informações coletadas
+            Console.WriteLine("Nome: {0}", nome);
+            Console.WriteLine("Idade: {0}", idade);
+            Console.WriteLine("Salário: {0}", salario);

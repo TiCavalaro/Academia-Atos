@@ -1,0 +1,29 @@
+     bool repetir = true;
+
+            do
+            {
+                int numero;
+
+                do
+                {
+                    Console.Write("Digite um número inteiro: ");
+                } while (!int.TryParse(Console.ReadLine(), out numero));
+
+                if (numero % 2 == 0)
+                {
+                    Console.WriteLine("O número é par.");
+                }
+                else
+                {
+                    Console.WriteLine("O número é ímpar.");
+                }
+
+                Console.Write("Deseja repetir o programa? (S/N): ");
+                string resposta = Console.ReadLine().ToUpper();
+
+                if (resposta == "N")
+                {
+                    repetir = false;
+                }
+
+            } while (repetir);

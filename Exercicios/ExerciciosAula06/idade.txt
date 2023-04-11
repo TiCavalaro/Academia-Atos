@@ -1,0 +1,9 @@
+            int idade;
+
+            do
+            {
+                Console.Write("Digite sua idade: ");
+                idade = int.Parse(Console.ReadLine());
+            } while (idade <= 0);
+
+            Console.WriteLine($"Sua idade é {idade}");
