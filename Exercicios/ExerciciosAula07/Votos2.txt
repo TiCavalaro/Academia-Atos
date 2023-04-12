@@ -1,0 +1,54 @@
+            int votosJoao = 0, votosZeca = 0, votosBranco = 0, votosNulos = 0, totalVotos = 0;
+            string voto;
+
+            Console.WriteLine("Digite JOAO, ZECA, BRANCO ou NULO para votar. Digite FIM para encerrar a votação.");
+
+            while (true)
+            {
+                voto = Console.ReadLine().ToUpper();
+
+                if (voto == "FIM")
+                {
+                    break;
+                }
+                else if (voto == "JOAO")
+                {
+                    votosJoao++;
+                    totalVotos++;
+                }
+                else if (voto == "ZECA")
+                {
+                    votosZeca++;
+                    totalVotos++;
+                }
+                else if (voto == "BRANCO")
+                {
+                    votosBranco++;
+                    totalVotos++;
+                }
+                else
+                {
+                    votosNulos++;
+                    totalVotos++;
+                }
+            }
+
+            Console.WriteLine("Resultado da votação:");
+            Console.WriteLine($"João: {votosJoao} votos");
+            Console.WriteLine($"Zeca: {votosZeca} votos");
+            Console.WriteLine($"Branco: {votosBranco} votos");
+            Console.WriteLine($"Nulo: {votosNulos} votos");
+            Console.WriteLine($"Total de votos: {totalVotos}");
+
+            if (votosJoao > votosZeca)
+            {
+                Console.WriteLine("João venceu a eleição.");
+            }
+            else if (votosZeca > votosJoao)
+            {
+                Console.WriteLine("Zeca venceu a eleição.");
+            }
+            else
+            {
+                Console.WriteLine("A eleição terminou em empate.");
+            }

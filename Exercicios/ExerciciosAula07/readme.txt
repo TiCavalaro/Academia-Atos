@@ -1,0 +1,1 @@
+Atividades da aula 06 que foram feitas com o while.

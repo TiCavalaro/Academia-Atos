@@ -1,0 +1,26 @@
+            int opcao = 1;
+            while (opcao != 0)
+            {
+            
+            int valor;
+            for (; ; )
+            {
+                Console.WriteLine("Digite um numero inteiro e positivo");
+                valor = int.Parse(Console.ReadLine());
+
+                if (valor >= 0)
+                {
+                    break;
+                }
+            }
+            for (int i = 1; i < valor; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine(i + " , ");
+                }
+            }
+
+            Console.WriteLine("Digite nao zero para continuar");
+            opcao = int.Parse(Console.ReadLine());
+            }

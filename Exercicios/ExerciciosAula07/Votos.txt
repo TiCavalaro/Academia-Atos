@@ -1,0 +1,35 @@
+       int votosJoao = 0, votosZeca = 0, votosBranco = 0;
+            string voto;
+
+            Console.WriteLine(Digite JOAO, ZECA ou BRANCO para escolher um voto. Digite FIM para encerrar);
+
+            while (true)
+            {
+                voto = Console.ReadLine().ToUpper();
+
+                if (voto == FIM)
+                {
+                    break;
+                }
+                else if (voto == JOAO)
+                {
+                    votosJoao++;
+                }
+                else if (voto == ZECA)
+                {
+                    votosZeca++;
+                }
+                else if (voto == BRANCO)
+                {
+                    votosBranco++;
+                }
+                else
+                {
+                    Console.WriteLine(Voto inválido. Tente novamente.);
+                }
+            }
+
+            Console.WriteLine(Resultado da votação);
+            Console.WriteLine($João {votosJoao} votos);
+            Console.WriteLine($Zeca {votosZeca} votos);
+            Console.WriteLine($Branco {votosBranco} votos);

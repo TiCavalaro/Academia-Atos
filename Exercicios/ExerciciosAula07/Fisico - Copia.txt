@@ -1,0 +1,34 @@
+        int maiorIdade = 0;
+        int qtdMulheres = 0;
+
+        while (true) {
+            Console.Write("Digite o sexo (M/F): ");
+            char sexo = Console.ReadKey().KeyChar;
+            Console.WriteLine();
+
+            Console.Write("Digite a cor dos olhos (A/V/C): ");
+            char olhos = Console.ReadKey().KeyChar;
+            Console.WriteLine();
+
+            Console.Write("Digite a cor dos cabelos (L/C/P): ");
+            char cabelos = Console.ReadKey().KeyChar;
+            Console.WriteLine();
+
+            Console.Write("Digite a idade: ");
+            int idade = int.Parse(Console.ReadLine());
+
+            if (idade == -1) {
+                break;
+            }
+
+            if (idade > maiorIdade) {
+                maiorIdade = idade;
+            }
+
+            if (sexo == 'F' && idade >= 18 && idade <= 35 && olhos == 'V' && cabelos == 'L') {
+                qtdMulheres++;
+            }
+        }
+
+        Console.WriteLine($"Maior idade: {maiorIdade}");
+        Console.WriteLine($"Qtd mulheres: {qtdMulheres}");

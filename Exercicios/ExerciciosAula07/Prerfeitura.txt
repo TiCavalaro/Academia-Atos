@@ -1,0 +1,40 @@
+ int count = 0;
+        double totalSalary = 0.0, averageSalary = 0.0, maxSalary = double.MinValue;
+        int totalChildren = 0, averageChildren = 0, countSalaryUpTo100 = 0;
+
+        while (true) {
+            Console.Write("Digite o salário (ou um valor negativo para sair): ");
+            double salary = double.Parse(Console.ReadLine());
+
+            if (salary < 0) {
+                break;
+            }
+
+            Console.Write("Digite o número de filhos: ");
+            int children = int.Parse(Console.ReadLine());
+
+            count++;
+            totalSalary += salary;
+            totalChildren += children;
+
+            if (salary > maxSalary) {
+                maxSalary = salary;
+            }
+
+            if (salary <= 100) {
+                countSalaryUpTo100++;
+            }
+        }
+
+        if (count > 0) {
+            averageSalary = totalSalary / count;
+            averageChildren = totalChildren / count;
+
+            Console.WriteLine("Média do salário: " + averageSalary.ToString("F2"));
+            Console.WriteLine("Média do número de filhos: " + averageChildren.ToString("F2"));
+            Console.WriteLine("Maior salário: " + maxSalary.ToString("F2"));
+            Console.WriteLine("Percentual de pessoas com salário até R$ 100,00: " 
+                              + (100.0 * countSalaryUpTo100 / count).ToString("F2") + "%");
+        } else {
+            Console.WriteLine("Nenhum dado foi informado.");
+        }
