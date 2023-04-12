@@ -1,4 +1,4 @@
-     int pessoasCom1a3Filhos = 0;
+    	    int pessoasCom1a3Filhos = 0;
             int pessoasCom4a7Filhos = 0;
             int pessoasComMaisDe8Filhos = 0;
             int pessoasSemFilhos = 0;
