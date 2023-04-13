@@ -1,4 +1,4 @@
-  String nome;
+  	   String nome;
             double a, b;
             Console.WriteLine("Digite seu nome");
             nome = Console.ReadLine();

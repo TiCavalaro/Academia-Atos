@@ -1,0 +1,1 @@
+Mudei levemente a maneira de nomear os exercícios para facilitar sua visualização

@@ -1,0 +1,42 @@
+  int[] vetor = new int[10];
+            int count2 = 0, count4 = 0, count8 = 0;
+            int i = 0;
+
+            // Lê os valores do vetor até que -1 seja digitado ou o vetor esteja cheio
+            while (i < vetor.Length)
+            {
+                Console.WriteLine("Digite um número positivo (ou -1 para sair):");
+                int num = int.Parse(Console.ReadLine());
+                if (num == -1)
+                {
+                    break;
+                }
+                else if (num <= 0)
+                {
+                    Console.WriteLine("Número inválido. Digite um número positivo.");
+                }
+                else
+                {
+                    vetor[i] = num;
+                    i++;
+                }
+            }
+            for (int j = 0; j < i; j++)
+            {
+                if (vetor[j] == 2)
+                {
+                    count2++;
+                }
+                else if (vetor[j] == 4)
+                {
+                    count4++;
+                }
+                else if (vetor[j] == 8)
+                {
+                    count8++;
+                }
+            }
+
+            Console.WriteLine("O número 2 aparece {0} vezes.", count2);
+            Console.WriteLine("O número 4 aparece {0} vezes.", count4);
+            Console.WriteLine("O número 8 aparece {0} vezes.", count8);

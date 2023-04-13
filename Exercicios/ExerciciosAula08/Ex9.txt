@@ -1,0 +1,33 @@
+
+            int[] vetor = new int[10];
+
+            // Lê 10 valores para o vetor
+            for (int i = 0; i < 10; i++)
+            {
+                vetor[i] = int.Parse(Console.ReadLine());
+            }
+
+            for (int i = 0; i < vetor.Length - 1; i++)
+            {
+                int indiceMenor = i;
+                for (int j = i + 1; j < vetor.Length; j++)
+                {
+                    if (vetor[j] < vetor[indiceMenor])
+                    {
+                        indiceMenor = j;
+                    }
+                }
+                if (indiceMenor != i)
+                {
+                    int temp = vetor[i];
+                    vetor[i] = vetor[indiceMenor];
+                    vetor[indiceMenor] = temp;
+                }
+            }
+
+            // Exibe o vetor ordenado
+            Console.WriteLine("Vetor ordenado em ordem crescente:");
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(vetor[i]);
+            }

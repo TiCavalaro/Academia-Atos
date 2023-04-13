@@ -1,0 +1,16 @@
+
+            int[] vetor = new int[5];
+            int menor = 1111111;
+            for (int i = 0; i < vetor.Length; i++)
+            {
+                Console.WriteLine("Informe um valor ");
+                vetor[i] = int.Parse(Console.ReadLine());
+
+                if (vetor[i] < menor)
+                {
+                    menor = vetor[i];
+                }
+
+
+            }
+            Console.WriteLine("O menor e : " + menor);

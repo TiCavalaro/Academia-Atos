@@ -6,5 +6,5 @@
 
             double consumo = d / v;
 
-            Console.WriteLine($"O consumo médio do automóvel é de {consumo} km/l.");
+            Console.WriteLine("O consumo médio do automóvel é de " + consumo + "  km/l.");
 

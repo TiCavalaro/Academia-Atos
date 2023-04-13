@@ -1,4 +1,4 @@
-  double elei, brancos, nulo, validos;
+	    double elei, brancos, nulo, validos;
 
             Console.Write("Digite o número de eleitores: ");
             elei = double.Parse(Console.ReadLine());

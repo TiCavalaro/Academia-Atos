@@ -1,0 +1,27 @@
+ 	int[] numeros = new int[10];
+        int[] pares = new int[10];
+        int[] impares = new int[10];
+        int indicePar = 0, indiceImpar = 0;
+
+        for (int i = 0; i < 10; i++) {
+            numeros[i] = Convert.ToInt32(Console.ReadLine());
+            if (numeros[i] % 2 == 0) {
+                pares[indicePar] = numeros[i];
+                indicePar++;
+            } else {
+                impares[indiceImpar] = numeros[i];
+                indiceImpar++;
+            }
+        }
+
+        Console.Write("Pares: ");
+        for (int i = 0; i < indicePar; i++) {
+            Console.Write(pares[i] + " ");
+        }
+        Console.WriteLine();
+
+        Console.Write("Ímpares: ");
+        for (int i = 0; i < indiceImpar; i++) {
+            Console.Write(impares[i] + " ");
+        }
+        Console.WriteLine();
