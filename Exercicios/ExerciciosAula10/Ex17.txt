@@ -1,0 +1,50 @@
+  	    int[,] matriz = new int[4, 4];
+            int maiorValor = -100000000;
+            int menorValor = 100000000;
+            int linhaMenor=10000;
+            int colunaMenor=10000;
+
+            int linhaMaiorValor = 0;
+            int colunaMaiorValor = 0;
+
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write("Digite o elemento [" + i + "," + j + "]: ");
+                    matriz[i, j] = int.Parse(Console.ReadLine());
+
+                    if (matriz[i, j] > maiorValor)
+                    {
+                        maiorValor = matriz[i, j];
+                        linhaMaiorValor = i;
+                        colunaMaiorValor = j;
+                    }
+                }
+            }
+
+            Console.WriteLine("Matriz :");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write(matriz[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            for (int i = linhaMaiorValor; i <= linhaMaiorValor; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    if (matriz[i, j] < menorValor)
+                    {
+                        menorValor = matriz[i, j];
+                        linhaMenor = i;
+                        colunaMenor = j;
+                    }
+                }
+            }
+
+
+            Console.WriteLine("O mair valor se encontra na linha " + linhaMaiorValor + " e na coluna " + colunaMaiorValor + " sendo ele " + maiorValor);
+            Console.WriteLine("O menor valor da linha " + linhaMaiorValor   + " se encontra na coluna " + colunaMenor + " sendo ele " + menorValor);

@@ -1,0 +1,37 @@
+  	   int[,] A = new int[3, 4];
+            int[,] B = new int[4, 3];
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write("Digite o valor da posição [{0},{1}]: ", i, j);
+                    A[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+
+            Console.WriteLine("Matriz A:");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write(A[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                   B[j, i] = A[i, j];
+                }
+            }
+            Console.WriteLine("Matriz B:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(B[i, j] + " ");
+                }
+                Console.WriteLine();
+            }

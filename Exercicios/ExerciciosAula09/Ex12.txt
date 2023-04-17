@@ -1,0 +1,24 @@
+
+            int[,] matriz = new int[4, 3];
+
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write("Digite o valor da posicao " + i + j + " :");
+                    matriz[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+
+            Console.WriteLine("Valores com soma de índices par:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if ((i + j) % 2 == 0)
+                    {
+                        Console.WriteLine(matriz[i, j]);
+                    }
+                }
+
+            }

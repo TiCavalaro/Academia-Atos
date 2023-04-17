@@ -1,0 +1,35 @@
+
+
+            int[,] matriz = new int[4, 4];
+
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write($"Digite um número para a posição" + i + " " + j + " : ");
+                    int num = int.Parse(Console.ReadLine());
+                    matriz[i, j] = num;
+                }
+            }
+            Console.WriteLine("Matriz:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write(matriz[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Diagonal:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    if (i == j)
+                    {
+                        Console.WriteLine(matriz[i, j]);
+                    }
+                }
+
+            }

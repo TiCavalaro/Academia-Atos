@@ -1,0 +1,34 @@
+           int[,] matriz = new int[4, 4];
+
+            Random random = new Random();
+
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    matriz[i, j] = random.Next(0, 10);
+                }
+            }
+            Console.WriteLine("Matriz: ");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write(matriz[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+
+            int maiorNumero = -1;
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    if (matriz[i, j] > maiorNumero)
+                    {
+                        maiorNumero = matriz[i, j];
+                    }
+                }
+            }
+
+            Console.WriteLine("O maior número da matriz  e " + maiorNumero);

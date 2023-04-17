@@ -1,0 +1,19 @@
+	int[,] matriz = new int[5, 3];
+
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write("Digite um numero: ");
+            int num = int.Parse(Console.ReadLine());
+            matriz[i, 0] = num;
+            matriz[i, 1] = num + 10;
+            matriz[i, 2] = num * 2;
+        }
+
+        for (int i = 0; i < 5; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                Console.Write(matriz[i, j] + " ");
+            }
+            Console.WriteLine();
+        }

@@ -1,0 +1,61 @@
+           double[,] matriz1 = new double[2, 3];
+            double[,] matriz2 = new double[2, 3];
+            double[,] soma = new double[2, 3];
+
+            Console.WriteLine("Digite os valores para a primeira: ");
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write("Digite o valor para a posição " + i + j);
+                    matriz1[i, j] = double.Parse(Console.ReadLine());
+                }
+            }
+
+            Console.WriteLine("Digite os valores para a segunda: ");
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write("Digite o valor para a posição " + i + j);
+                    matriz2[i, j] = double.Parse(Console.ReadLine());
+                }
+            }
+
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    soma[i, j] = matriz1[i, j] + matriz2[i, j];
+                }
+            }
+            Console.WriteLine("Matriz um: ");
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(matriz1[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Matriz dos: ");
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(matriz2[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+
+
+            Console.WriteLine("Matriz resultado: ");
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(soma[i, j] + " ");
+                }
+                Console.WriteLine();
+            }

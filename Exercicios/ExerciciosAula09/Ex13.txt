@@ -1,0 +1,39 @@
+            int somaDiagonalPrincipal = 0;
+            int somaDiagonalSecundaria = 0;
+            int[,] matriz = new int[3, 3];
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write("Digite o valor da posicao " + i + j + " :");
+                    matriz[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+
+
+
+            Console.WriteLine("Matriz:");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(matriz[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                somaDiagonalPrincipal += matriz[i, i];
+                somaDiagonalSecundaria += matriz[i, 2 - i];
+            }
+
+            if (somaDiagonalPrincipal == somaDiagonalSecundaria)
+            {
+                Console.WriteLine("A soma dos elementos da diagonal e igual ao das secundaria", somaDiagonalPrincipal, somaDiagonalSecundaria);
+            }
+            else
+            {
+                Console.WriteLine("A soma das diagonais nao e igual");
+            }

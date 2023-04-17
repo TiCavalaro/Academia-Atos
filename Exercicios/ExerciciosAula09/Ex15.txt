@@ -1,0 +1,49 @@
+	    int[,] A = new int[4, 4];
+            int[,] B = new int[4, 4];
+            int[,] C = new int[4, 4];
+
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write("Digite o valor da posição [{0},{1}]: ", i, j);
+                    A[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write("Digite o valor da posição [{0},{1}]: ", i, j + " da matriz B");
+                    B[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("Matriz A:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write(A[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+      
+            Console.WriteLine("Matriz B:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write(B[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("Matriz soma:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    C[i, j] = A[i, j] + B[i, j];
+                    Console.Write(C[i, j] + " ");
+                }
+                Console.WriteLine();
+            }

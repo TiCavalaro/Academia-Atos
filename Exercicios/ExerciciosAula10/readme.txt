@@ -1,0 +1,1 @@
+Foram feitos os mesmos exercícios da aula 09.

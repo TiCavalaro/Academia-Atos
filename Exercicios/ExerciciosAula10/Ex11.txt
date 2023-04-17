@@ -1,0 +1,29 @@
+    	    double[,] A = new double[3, 3];
+            double[,] matrizResultante = new double[3, 3];
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write("Digite o valor de A" + i + j +" : ");
+                    A[i, j] = double.Parse(Console.ReadLine());
+                }
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    double somaIndices = i + j;
+                    matrizResultante[i, j] = A[i, j] / somaIndices;
+                    matrizResultante[0, 0] = A[0, 0];
+                }
+            }
+
+            Console.WriteLine("Matriz Resultante:");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(matrizResultante[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }

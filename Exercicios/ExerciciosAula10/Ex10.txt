@@ -1,0 +1,71 @@
+          double[,] A = new double[4, 4];
+            Console.WriteLine("Digite os elementos da matriz A:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write($"A[{i},{j}] = ");
+                    A[i, j] = double.Parse(Console.ReadLine());
+                }
+            }
+
+            double[,] B = new double[4, 4];
+            Console.WriteLine("Digite os elementos da matriz B:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write($"B[{i},{j}] = ");
+                    B[i, j] = double.Parse(Console.ReadLine());
+                }
+            }
+
+            double soma = 0;
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    soma += A[i, j] + B[i, j];
+                }
+            }
+            double media = soma / (2 * 16);
+
+            int abaixo = 0;
+            int acima = 0;
+            int naMedia = 0;
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    if (A[i, j] < media)
+                    {
+                        abaixo++;
+                    }
+                    else if (A[i, j] > media)
+                    {
+                        acima++;
+                    }
+                    else
+                    {
+                        naMedia++;
+                    }
+
+                    if (B[i, j] < media)
+                    {
+                        abaixo++;
+                    }
+                    else if (B[i, j] > media)
+                    {
+                        acima++;
+                    }
+                    else
+                    {
+                        naMedia++;
+                    }
+                }
+            }
+
+            Console.WriteLine("Média: " + media);
+            Console.WriteLine("Elementos abaixo da média: " + abaixo);
+            Console.WriteLine("Elementos acima da média: "  + acima);
+            Console.WriteLine("Elementos na média: " + naMedia);
