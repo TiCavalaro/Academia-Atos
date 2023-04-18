@@ -1,0 +1,1 @@
+Não tivemos exercícios nessa aula.
