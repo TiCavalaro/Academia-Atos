@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Runtime.Intrinsics.X86;
+using System.Timers;
+
 
 namespace ConsoleAppAula11
 {
@@ -11,9 +13,9 @@ namespace ConsoleAppAula11
             while (continuar)
             {
                 Console.Clear();
-                Console.WriteLine("\nDigite 1 para jogar com outro Player");
-                Console.WriteLine("\nInsira 2 para jogar com o computador");
-                Console.WriteLine("\nInsira 3 para finalizar o programa:");
+                Console.WriteLine("Digite 1 para jogar com outro Player");
+                Console.WriteLine("Insira 2 para jogar com o computador");
+                Console.WriteLine("Insira 3 para finalizar o programa:");
 
                 int opcao;
                 if (int.TryParse(Console.ReadLine(), out opcao))
@@ -21,22 +23,30 @@ namespace ConsoleAppAula11
                     switch (opcao)
                     {
                         case 1:
-                            Player();
+                            Player();//faz o contra jogador
+                            Contador(); // timer
+                            Console.Clear(); //reseta
                             break;
                         case 2:
-                            Computador();
+                            Computador();//contra o pc
+                            Contador();//timer
+                            Console.Clear();// clear
                             break;
                         case 3:
-                            continuar = false;
+                            continuar = false; // finaliza
                             break;
                         default:
-                            Console.WriteLine("\nOpção inválida");
+                            Console.WriteLine("Opção invalida");// casi numero errado
+                            Console.WriteLine("Clique ENTER para sair");
+                            Console.ReadLine();
                             break;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("\nEntrada inválida. Digite um número inteiro.");
+                    Console.WriteLine("Entrada invalida. Digite um numero inteiro.");//caso algo sem ser numero seja digitado
+                    Console.WriteLine("Clique ENTER para sair");
+                    Console.ReadLine();
                 }
             }
         }
@@ -47,29 +57,35 @@ namespace ConsoleAppAula11
         {
             bool jogarNovamente = true;
 
-            while (jogarNovamente)
+            while (jogarNovamente)// laco jogar
             {
                 char[,] matriz = new char[3, 3];
                 int linha, coluna, contador;
 
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 3; i++)//faz matriz
                 {
                     Console.WriteLine();
                     for (int j = 0; j < 3; j++)
                     {
-                        Console.Write("\t.");
-                        matriz[i, j] = '.';
+                        Console.Write("\t.");// faz o jogo \t faz a separacao
+                        matriz[i, j] = '.';//o que eu decidi
                     }
                     Console.WriteLine();
                     Console.WriteLine();
                 }
 
-                // Primeiro jogador sempre será 'X' e o segundo sempre será 'O';
-                for (contador = 0; contador < 9; contador++)
+                // Primeiro jogador sempre sera 'X' e o segundo sempre sera 'O';
+                for (contador = 0; contador < 9; contador++)//9 quadrados, 9 contagens
                 {
-                    Console.WriteLine($"\nJogador {(contador % 2) + 1} escolha a posição (linha, coluna) para jogar:");
+                    if (contador == 8)//empatador
+                    {
+                        Console.WriteLine("Empate!");
+                        jogarNovamente = false;
+                        break;
+                    }
+                    Console.WriteLine($"Jogador {(contador % 2) + 1} escolha a posição (linha, coluna) para jogar:");
 
-                    try
+                    try//digitacao da posicao (aprendido em Java)
                     {
                         Console.Write("Linha: ");
                         linha = int.Parse(Console.ReadLine()) - 1;
@@ -77,24 +93,24 @@ namespace ConsoleAppAula11
                         Console.Write("Coluna: ");
                         coluna = int.Parse(Console.ReadLine()) - 1;
                     }
-                    catch (FormatException)
+                    catch (FormatException)//catch para caso o usuario digitar errado
                     {
-                        Console.WriteLine("\nEntrada inválida para a linha ou coluna, tente novamente\n");
+                        Console.WriteLine("Entrada invalida para a linha ou coluna, tente novamente\n");
                         contador--;
                         continue;
                     }
 
-                    if (linha < 0 || linha > 2 || coluna < 0 || coluna > 2)
+                    if (linha < 0 || linha > 2 || coluna < 0 || coluna > 2)//erro de digitacao 2
                     {
-                        Console.WriteLine("\nLinha ou coluna inválida, tente novamente\n");
+                        Console.WriteLine("Linha ou coluna invalida, tente novamente\n");
                         contador--;
                         continue;
                     }
 
                     Console.WriteLine();
-                    if (matriz[linha, coluna] == '.')
+                    if (matriz[linha, coluna] == '.')//deixa  a jogada acontecer
                     {
-                        matriz[linha, coluna] = contador % 2 == 1 ? 'O' : 'X';
+                        matriz[linha, coluna] = contador % 2 == 1 ? 'O' : 'X';//verifica qual vai ser o jogador
                         for (int i = 0; i < 3; i++)
                         {
                             Console.WriteLine();
@@ -105,31 +121,24 @@ namespace ConsoleAppAula11
                             Console.WriteLine();
                             Console.WriteLine();
                         }
-                        if ((matriz[0, 0] == matriz[0, 1] && matriz[0, 0] == matriz[0, 2] && matriz[0, 0] != '.') ||
-                            (matriz[0, 0] == matriz[1, 1] && matriz[0, 0] == matriz[2, 2] && matriz[0, 0] != '.') ||
-                            (matriz[0, 0] == matriz[1, 0] && matriz[0, 0] == matriz[2, 0] && matriz[0, 0] != '.') ||
-                            (matriz[0, 1] == matriz[1, 1] && matriz[0, 1] == matriz[2, 1] && matriz[0, 1] != '.') ||
-                            (matriz[0, 2] == matriz[1, 2] && matriz[0, 2] == matriz[2, 2] && matriz[0, 2] != '.') ||
+                        if((matriz[0, 1] == matriz[1, 1] && matriz[0, 1] == matriz[2, 1] && matriz[0, 1] != '.') ||// verifica vitoria
                             (matriz[1, 0] == matriz[1, 1] && matriz[1, 0] == matriz[1, 2] && matriz[1, 0] != '.') ||
+                            (matriz[0, 0] == matriz[1, 0] && matriz[0, 0] == matriz[2, 0] && matriz[0, 0] != '.') ||
                             (matriz[2, 0] == matriz[2, 1] && matriz[2, 0] == matriz[2, 2] && matriz[2, 0] != '.') ||
-                            (matriz[2, 0] == matriz[1, 1] && matriz[2, 0] == matriz[0, 2] && matriz[2, 0] != '.'))
+                            (matriz[0, 2] == matriz[1, 2] && matriz[0, 2] == matriz[2, 2] && matriz[0, 2] != '.') ||
+                            (matriz[0, 0] == matriz[0, 1] && matriz[0, 0] == matriz[0, 2] && matriz[0, 0] != '.') ||//corrigir
+                            (matriz[0, 2] == matriz[1, 1] && matriz[0, 2] == matriz[2, 0] && matriz[0, 2] != '.') ||
+                            (matriz[0, 0] == matriz[1, 1] && matriz[0, 0] == matriz[2, 2] && matriz[0, 0] != '.'))
                         {
-                            Console.WriteLine($"\nJogador {(contador % 2) + 1} ganhou!");
+                            Console.WriteLine($"Jogador {(contador % 2) + 1} ganhou!");
                             jogarNovamente = false;
                             break;
                         }
                     }
-                    else if (matriz[linha, coluna] != '.')
+                    else if (matriz[linha, coluna] != '.')//nao deixa a jogada acontecer
                     {
-                        Console.WriteLine("\nO espaço escolhido já está ocupado, repita a operação para um espaço válido\n");
+                        Console.WriteLine("O espaco escolhido ja esta ocupado, repita a operacao para um espaço valido");
                         contador--;
-                    }
-                    // Verificar se ocorreu um empate após a última jogada
-                    if (contador == 8)
-                    {
-                        Console.WriteLine("\nEmpate!");
-                        jogarNovamente = false;
-                        break;
                     }
                 }
 
@@ -137,9 +146,9 @@ namespace ConsoleAppAula11
         }
 
 
-        public static void Computador()
+        public static void Computador()// jogar contra o comptuador
         {
-            bool jogarNovamente = true;
+            bool jogarNovamente = true;//continuar
 
             while (jogarNovamente)
             {
@@ -160,31 +169,48 @@ namespace ConsoleAppAula11
 
                 Random rnd = new Random();
 
-                // O jogador sempre será 'X' e o computador sempre será 'O';
-                for (contador = 0; contador < 9; contador++)
+                // O jogador sempre sera 'X' e o computador sempre sera 'O';
+                for (contador = 0; contador < 9; contador++)//inicio
                 {
-                    if (contador % 2 == 0)
+                
+                    if (contador % 2 == 0)//verifica quem vai jogar (comecando pelo computador)
                     {
-                        Console.WriteLine($"\nEscolha a posição (linha, coluna) para jogar:");
+                        linha = rnd.Next(0, 3);
+                        coluna = rnd.Next(0, 3);
+
+                        while (matriz[linha, coluna] != '.')
+                        {
+                            linha = rnd.Next(0, 3);
+                            coluna = rnd.Next(0, 3);
+                        }
+
+                        Console.WriteLine($"O computador jogou na posicao ({linha + 1}, {coluna + 1})");
+                        matriz[linha, coluna] = 'O';
+                        Pc();
+                    }
+
+                    else//jogador escolhe
+                    {
+                        Console.WriteLine("Escolha a posicao (linha, coluna) para jogar:");
 
                         try
                         {
                             Console.Write("Linha: ");
-                            linha = int.Parse(Console.ReadLine()) - 1;
+                            linha = int.Parse(Console.ReadLine()) - 1;//posicao da linha escolhida
 
                             Console.Write("Coluna: ");
-                            coluna = int.Parse(Console.ReadLine()) - 1;
+                            coluna = int.Parse(Console.ReadLine()) - 1;//posicao da coluna escolhida
                         }
                         catch (FormatException)
                         {
-                            Console.WriteLine("\nEntrada inválida para a linha ou coluna, tente novamente\n");
+                            Console.WriteLine("Entrada invalida para a linha ou coluna, tente novamente\n");
                             contador--;
                             continue;
                         }
 
                         if (linha < 0 || linha > 2 || coluna < 0 || coluna > 2)
                         {
-                            Console.WriteLine("\nLinha ou coluna inválida, tente novamente\n");
+                            Console.WriteLine("Linha ou coluna invalida, tente novamente\n");
                             contador--;
                             continue;
                         }
@@ -196,24 +222,10 @@ namespace ConsoleAppAula11
                         }
                         else if (matriz[linha, coluna] != '.')
                         {
-                            Console.WriteLine("\nO espaço escolhido já está ocupado, repita a operação para um espaço válido\n");
+                            Console.WriteLine("O espaço escolhido ja esta ocupado, repita a operação para um espaço valido");
                             contador--;
                             continue;
                         }
-                    }
-                    else
-                    {
-                        linha = rnd.Next(0, 3);
-                        coluna = rnd.Next(0, 3);
-
-                        while (matriz[linha, coluna] != '.')
-                        {
-                            linha = rnd.Next(0, 3);
-                            coluna = rnd.Next(0, 3);
-                        }
-
-                        Console.WriteLine($"\nO computador jogou na posição ({linha + 1}, {coluna + 1})");
-                        matriz[linha, coluna] = 'O';
                     }
 
                     for (int i = 0; i < 3; i++)
@@ -227,41 +239,65 @@ namespace ConsoleAppAula11
                         Console.WriteLine();
                     }
 
-                    if ((matriz[0, 1] == matriz[1, 1] && matriz[0, 1] == matriz[2, 1] && matriz[0, 1] != '.') ||
+                    if ((matriz[0, 1] == matriz[1, 1] && matriz[0, 1] == matriz[2, 1] && matriz[0, 1] != '.') ||//verifica vitoria 2
                         (matriz[1, 0] == matriz[1, 1] && matriz[1, 0] == matriz[1, 2] && matriz[1, 0] != '.') ||
                         (matriz[0, 0] == matriz[1, 0] && matriz[0, 0] == matriz[2, 0] && matriz[0, 0] != '.') ||
                         (matriz[2, 0] == matriz[2, 1] && matriz[2, 0] == matriz[2, 2] && matriz[2, 0] != '.') ||
                         (matriz[0, 2] == matriz[1, 2] && matriz[0, 2] == matriz[2, 2] && matriz[0, 2] != '.') ||
-                        (matriz[0, 0] == matriz[1, 0] && matriz[0, 0] == matriz[2, 0] && matriz[0, 0] != '.') ||
+                        (matriz[0, 0] == matriz[0, 1] && matriz[0, 0] == matriz[0, 2] && matriz[0, 0] != '.') ||//corrigir
                         (matriz[0, 2] == matriz[1, 1] && matriz[0, 2] == matriz[2, 0] && matriz[0, 2] != '.') ||
-                        (matriz[0, 1] == matriz[1, 0] && matriz[0, 1] == matriz[2, 2] && matriz[0, 1] != '.'))
+                        (matriz[0, 0] == matriz[1, 1] && matriz[0, 0] == matriz[2, 2] && matriz[0, 0] != '.'))
                     {
                         if (contador % 2 == 0)
                         {
-                            Console.WriteLine("\nO computador venceu!");
+                            Console.WriteLine("O computador venceu!");//caso vitoria pc
                         }
                         else
                         {
-                            Console.WriteLine("\nVocê venceu!");
+                            Console.WriteLine("Voce venceu!");//caso vitoria sua
                         }
                         break;
                     }
                     if (contador == 8)
                     {
-                        Console.WriteLine("\nDeu velha!");
+                        Console.WriteLine("Deu velha!");// caso empate
                     }
                 }
-
-                Console.WriteLine("\nDeseja jogar novamente? (S/N)");
-                string resposta = Console.ReadLine();
-
-                if (resposta.ToUpper() != "S")
-                {
-                    jogarNovamente = false;
-                }
+                break;
             }
 
         }
 
+
+        static void Contador()//temporizador
+        {
+            int count = 0;
+            System.Timers.Timer timer = new System.Timers.Timer(1000);
+            timer.Elapsed += (sender, e) => {
+                count++;
+                if (count == 5)
+                {
+                    Console.WriteLine("Contador de 5 segundos terminou.");
+                    Console.WriteLine("Clique ENTER para sair");
+
+
+                    timer.Stop();
+                }
+            };
+            timer.Start();
+            Console.WriteLine("Contando 5 segundos...");
+            Console.ReadLine();//sai do timer e da clear
+        }
+
+
+        static void Pc()//timer para melhorar a jogabilidade
+        {
+           
+            Console.WriteLine("Digite ENTER para confimar a jogada do computador...");
+            Console.ReadLine();//sai do timer e da clear
+        }
+
+
     }
 }
+
