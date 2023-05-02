@@ -129,7 +129,7 @@ img{
     
     background: linear-gradient(45deg, white 50%, transparent 50%) left calc(50% + 20px) bottom no-repeat, 
                 linear-gradient(-45deg, white 50%, transparent 50%) left calc(50% - 20px) bottom no-repeat, 
-                url(../img/c02.jpg);
+                url(../img/c03.jpg);
     background-size: 40px 40px, 40px 40px, cover;
 }
 
