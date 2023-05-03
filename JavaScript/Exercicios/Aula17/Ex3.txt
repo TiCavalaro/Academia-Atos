@@ -1,0 +1,1 @@
+<button onclick="clicks++; (clicks <= 5)?alert(clicks):console.log(clicks);">Ok!</button>

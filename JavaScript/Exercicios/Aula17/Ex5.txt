@@ -1,0 +1,22 @@
+<label for="nome">Nome:</label>
+        <input type="text" id="nome"><br>
+    
+        <label for="idade">Idade:</label>
+        <input type="text" id="idade"><br>
+    
+        <button id="botao">Verificar</button>
+        <script>
+            const botao = document.querySelector("#botao");
+            const nomeInput = document.querySelector("#nome");
+            const idadeInput = document.querySelector("#idade");
+
+            botao.addEventListener("click", function() {
+                const nome = nomeInput.value;
+                const idade = parseInt(idadeInput.value);
+
+                if (idade >= 18) {
+                alert(nome + " é maior de idade.");
+                } else {
+                alert(nome + " é menor de idade.");
+                }
+            });

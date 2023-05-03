@@ -1,0 +1,21 @@
+<h1>Exemplo de entrada de texto e botão</h1>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome"><br>
+
+    <label for="sobrenome">Sobrenome:</label>
+    <input type="text" id="sobrenome"><br>
+
+    <button id="botao">Concatenar</button>
+
+    <script>
+      const botao = document.querySelector("#botao");
+      const nomeInput = document.querySelector("#nome");
+      const sobrenomeInput = document.querySelector("#sobrenome");
+
+      botao.addEventListener("click", function() {
+        const nome = nomeInput.value;
+        const sobrenome = sobrenomeInput.value;
+
+        alert(nome + " " + sobrenome);
+      });
+    </script>
