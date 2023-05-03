@@ -1,0 +1,45 @@
+using System;
+
+public class Aluno
+{
+    public string Nome { get; set; }
+    public string Matricula { get; set; }
+    public DateTime DataNascimento { get; set; }
+    public int AnoIngresso { get; set; }
+
+    // Construtor que recebe nome e matrícula
+    public Aluno(string nome, string matricula)
+    {
+        Nome = nome;
+        Matricula = matricula;
+        Console.WriteLine($"Nome: {Nome} - Matrícula: {Matricula}");
+    }
+
+    // Construtor que recebe apenas a data de nascimento
+    public Aluno(DateTime dataNascimento)
+    {
+        DataNascimento = dataNascimento;
+        Console.WriteLine($"Data de Nascimento: {DataNascimento.ToShortDateString()}");
+    }
+
+    // Construtor que recebe nome, data de nascimento e ano de ingresso
+    public Aluno(string nome, DateTime dataNascimento, int anoIngresso)
+    {
+        Nome = nome;
+        DataNascimento = dataNascimento;
+        AnoIngresso = anoIngresso;
+        Console.WriteLine($"Nome: {Nome} - Data de Nascimento: {DataNascimento.ToShortDateString()} - Ano de Ingresso: {AnoIngresso}");
+    }
+}
+
+public class Program
+{
+    static void Main(string[] args)
+    {
+        Aluno aluno1 = new Aluno("João", "12345"); // utilizando o primeiro construtor
+        Aluno aluno2 = new Aluno(new DateTime(2000, 5, 12)); // utilizando o segundo construtor
+        Aluno aluno3 = new Aluno("Maria", new DateTime(1999, 8, 7), 2021); // utilizando o terceiro construtor
+
+        Console.ReadLine();
+    }
+}

@@ -1,0 +1,50 @@
+public class Pessoa
+{
+    public string Nome { get; set; }
+    public int Idade { get; set; }
+
+
+    public Pessoa(string nome, int idade)
+    {
+        Nome = nome;
+        Idade = idade;
+        Console.WriteLine($"Nome: {Nome} - Idade: {Idade}");
+    }
+    public Pessoa(int idade)
+    {
+        Idade = idade;
+        Console.WriteLine($"Idade: {Idade}");
+    }
+}
+
+public class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Qual construtor você gostaria de utilizar? (1 - Nome e idade / 2 - Apenas idade)");
+        int opcao = int.Parse(Console.ReadLine());
+
+        if (opcao == 1)
+        {
+            Console.WriteLine("Informe o nome:");
+            string nome = Console.ReadLine();
+
+            Console.WriteLine("Informe a idade:");
+            int idade = int.Parse(Console.ReadLine());
+
+            Pessoa pessoa = new Pessoa(nome, idade);
+        }
+        else if (opcao == 2)
+        {
+            Console.WriteLine("Informe a idade:");
+            int idade = int.Parse(Console.ReadLine());
+
+            Pessoa pessoa = new Pessoa(idade);
+        }
+        else
+        {
+            Console.WriteLine("Opção inválida!");
+        }
+
+        Console.ReadLine();
+    }
