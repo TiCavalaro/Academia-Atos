@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    }
+
+    .laranja{
+        background-color: rgb(243, 173, 43);
+        transition: all 0.25s ease-in-out;
+    }
+    .vermelho{
+        background-color: rgb(175, 40, 40);
+        transition: all 0.25s ease-in-out;
+    }
+    .azul{
+        background-color: rgb(25, 0, 255);
+        transition: all 0.25s ease-in-out;
+    }
+    .verde{
+        background-color: rgb(0, 255, 85);
+        transition: all 0.25s ease-in-out;
+    }
+
+
+    div.container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 90vw;
+        text-align: center;
+    }
+
+    </style>
+</head>
+<body>
+        <div class="container">    
+            <label>Escolha uma cor:</label><br>
+            <input type="radio" id="laranja" name="color" value="laranja">
+            <label for="red">Laranja</label><br>
+        
+            <input type="radio" id="vermelho" name="color" value="vermelho">
+            <label for="green">Vermelho</label><br>
+        
+            <input type="radio" id="azul" name="color" value="azul">
+            <label for="blue">Azul</label><br>
+        
+            <input type="radio" id="verde" name="color" value="verde">
+            <label for="yellow">Verde</label><br>
+
+    </div>
+    <script>
+        document.getElementById("laranja").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class","laranja");
+            })
+
+            document.getElementById("vermelho").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class","vermelho");
+            })
+
+            document.getElementById("azul").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class","azul");
+            })
+
+            document.getElementById("verde").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class","verde");
+            })
+    </script>
+</body>
+</html>

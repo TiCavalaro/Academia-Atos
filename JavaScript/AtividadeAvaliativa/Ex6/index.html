@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+            body{
+        background-color: rgb(57, 47, 194);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 90vw;
+        text-align: center;
+        }
+        #my-paragraph {
+        color: white;
+        background-color: black;
+        
+        }
+        #conteudo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+    </style>
+<body>
+    <div id="conteudo">
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, sapiente a. 
+            Corrupti explicabo neque, perspiciatis officia molestias veniam adipisci sed quaerat nobis 
+            temporibus in fuga iure voluptates illo laudantium quo?
+        </p>
+        <button id="white">Fonte Branca</button>
+        <button id="black">Fonte Preta</button>
+
+        <button id="white-background">Fundo Branco</button>
+        <button id="black-background">Fundo Preto</button>
+      </div>
+
+    <script>
+        var white = document.getElementById("white");
+        var black = document.getElementById("black");
+        var whiteBackground = document.getElementById("white-background");
+        var blackBackground = document.getElementById("black-background");
+        var para = document.getElementById("para");
+
+        white.addEventListener("click", function() {
+        para.style.color = "white";
+        });
+
+        black.addEventListener("click", function() {
+        para.style.color = "black";
+        });
+
+
+
+        whiteBackground.addEventListener("click", function() {
+        para.style.backgroundColor = "white";
+        });
+        blackBackground.addEventListener("click", function() {
+        para.style.backgroundColor = "black";
+        });
+
+
+
+
+    </script>
+</body>
+</html>
