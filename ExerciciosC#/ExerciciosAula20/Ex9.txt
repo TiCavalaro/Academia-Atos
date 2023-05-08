@@ -1,0 +1,27 @@
+	private double saldo;
+        public void DefinirSaldoInicial(double saldoInicial)
+        {
+            Saldo = saldoInicial;
+        }
+
+        public void Depositar(double valor)
+        {
+            Saldo += valor;
+        }
+        public bool Sacar(double valor)
+        {
+            if (valor <= Saldo)
+            {
+                Saldo -= valor;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public double Saldo
+        {
+            get { return saldo; }
+            set { saldo = value; }
+        }

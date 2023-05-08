@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleAppAula20
+{
+    internal class Livro
+    {
+        private string titulo;
+        private Autor autor;
+
+        public string Titulo
+        {
+            get { return titulo; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Título não pode ser vazio");
+                }
+                titulo = value;
+            }
+        }
+
+        public Autor Autor
+        {
+            get { return autor; }
+            set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Autor não pode ser nulo");
+                }
+                autor = value;
+            }
+        }
+    }
+}

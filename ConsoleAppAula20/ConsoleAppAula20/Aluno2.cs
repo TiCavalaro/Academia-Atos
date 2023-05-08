@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleAppAula20
+{
+    internal class Aluno2
+    {
+        private string nome;
+        private int matricula;
+
+        public string Nome
+        {
+            get { return nome; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    Console.WriteLine("O nome do aluno não pode ser vazio.");
+                }
+                nome = value;
+            }
+        }
+
+        public int Matricula
+        {
+            get { return matricula; }
+            set
+            {
+                if (value <= 0)
+                {
+                    Console.WriteLine("A matrícula do aluno deve ser positiva.");
+                }
+                matricula = value;
+            }
+        }
+    }
+}

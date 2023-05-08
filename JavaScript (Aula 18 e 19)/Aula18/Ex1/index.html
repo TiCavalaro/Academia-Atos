@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    }
+
+    .laranja{
+        background-color: rgb(243, 173, 43);
+        transition: all 0.25s ease-in-out;
+    }
+    .vermelho{
+        background-color: rgb(175, 40, 40);
+        transition: all 0.25s ease-in-out;
+    }
+    .azul{
+        background-color: rgb(25, 0, 255);
+        transition: all 0.25s ease-in-out;
+    }
+    .verde{
+        background-color: rgb(0, 255, 85);
+        transition: all 0.25s ease-in-out;
+    }
+
+    button{
+        padding: 5px 10px;
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: 300;
+        margin: 0 10px;
+    }
+
+    div.container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 90vw;
+        text-align: center;
+    }
+
+    </style>
+</head>
+<body>
+    // baseado no seguinte video https://www.youtube.com/watch?v=K4CbgeUCp6Q
+    <div class="container">
+        <button class="laranja" id="btn-laranja">Laranja</button>
+        <button class="vermelho" id="btn-vermelho">Vermelho</button>
+        <button class="azul" id="btn-azul">azul</button>
+        <button class="verde" id="btn-verde">verde</button>
+    </div>
+    <script>
+        document.getElementById("btn-laranja").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class","laranja");
+            })
+
+            document.getElementById("btn-vermelho").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class","vermelho");
+            })
+
+            document.getElementById("btn-azul").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class","azul");
+            })
+
+            document.getElementById("btn-verde").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class","verde");
+            })
+    </script>
+</body>
+</html>

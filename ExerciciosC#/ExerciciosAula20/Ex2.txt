@@ -1,0 +1,27 @@
+	private string nome;
+        private int matricula;
+        private string dataNascimento;
+        private int anoIngresso;
+        public Aluno(string nome, int matricula)
+        {
+            this.nome = nome;
+            this.matricula = matricula;
+        }
+        public Aluno(string dataNascimento)
+        {
+            this.dataNascimento = dataNascimento;
+        }
+        public Aluno(string nome, string dataNascimento, int anoIngresso)
+        {
+            this.nome = nome;
+            this.dataNascimento = dataNascimento;
+            this.anoIngresso = anoIngresso;
+        }
+
+        public void ImprimirInformacoes()
+        {
+            Console.WriteLine("Nome: " + nome);
+            Console.WriteLine("Matrícula: " + matricula);
+            Console.WriteLine("Data de nascimento: " + dataNascimento);
+            Console.WriteLine("Ano de ingresso: " + anoIngresso);
+        }

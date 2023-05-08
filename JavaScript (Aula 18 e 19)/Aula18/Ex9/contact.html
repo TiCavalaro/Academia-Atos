@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html  >
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <meta name="author" content="Cavalaro">
+    <meta name="description" content="Site de treino da Atos">
+    <meta name="keywords" content="html5, Atos">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="form.css">
+
+<body>
+  <div class="form" id="form">
+    <div class="form-container">
+        <form method="post" onsubmit="return valida()">
+
+            <h2>Contact</h2>
+            
+            <label for="login">Login<span>*</span></label>
+            <input type="text" id="login" name="login" required>
+
+            <label for="password">Password<span>*</span></label>
+            <input type="password" id="password" name="password" minlength="6" maxlength="10" required>
+            <label for="confirm-password">Confirm Password<span>*</span></label>
+
+            <input type="password" id="confirm" name="confirm" minlength="6" maxlength="10" required>
+            <button type="submit">Confirm</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function valida() {
+        var login = document.getElementById("login").value;
+        var senha = document.getElementById("password").value;
+        var confirma = document.getElementById("confirm").value;
+
+        // Verifica se as senhas são iguais
+        if (senha != confirma) {
+            alert("As senhas não coincidem!");
+            return false;
+        }
+
+        // Verifica se a senha possui entre 6 e 10
+        if (senha.length < 6 || senha.length > 10) {
+            alert("A senha deve possuir entre 6 e 10 caracteres!");
+            return false;
+        }
+
+        alert("Confirmado");
+        return false;
+    }
+</script>
+</script>
+</body>
+</html>

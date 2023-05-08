@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+         background-color: antiquewhite;   
+        box-sizing: border-box;
+        font-family: "Open Sans";
+    }
+    body{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 90vw;
+        text-align: center;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="conteudo">
+        <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sed porro distinctio cum?</p>
+        <button onclick="esconderTexto()">Esconder</button>
+        <button onclick="mostrarTexto()">Mostrar</button>
+        <button onclick="Texto()">Mostrar/Esconder</button>
+    </div>  
+
+
+    <script>
+        function Texto() {
+            const texto = document.querySelector("#texto");
+            if (texto.style.display === "none") {
+            texto.style.display = "block";
+            } else {
+            texto.style.display = "none";
+            }
+        }
+
+        const texto = document.querySelector("#texto");
+      
+        function esconderTexto() {
+            texto.style.display = "none";
+        }
+        
+        function mostrarTexto() {
+            texto.style.display = "block";
+        }
+    </script>
+</body>
+</html>
