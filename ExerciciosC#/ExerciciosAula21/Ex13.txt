@@ -1,0 +1,53 @@
+Livro livro = new Livro();
+livro.Titulo = "A Arte da Guerra";
+
+Autor autor = new Autor();
+autor.Nome = "Abra";
+autor.Idade = 12;
+
+livro.Autor = autor;
+
+livro.ExibirInformacoes();
+
+public class Autor
+{
+    private string _nome;
+    private int _idade;
+
+    public string Nome
+    {
+        get { return _nome; }
+        set { _nome = value; }
+    }
+
+    public int Idade
+    {
+        get { return _idade; }
+        set { _idade = value; }
+    }
+}
+
+public class Livro
+{
+    private string _titulo;
+    private Autor _autor;
+
+    public string Titulo
+    {
+        get { return _titulo; }
+        set { _titulo = value; }
+    }
+
+    public Autor Autor
+    {
+        get { return _autor; }
+        set { _autor = value; }
+    }
+
+    public void ExibirInformacoes()
+    {
+        Console.WriteLine("Título: " + _titulo);
+        Console.WriteLine("Autor: " + _autor.Nome);
+        Console.WriteLine("Idade do autor: " + _autor.Idade);
+    }
+}
