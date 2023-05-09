@@ -45,7 +45,7 @@
         <button id="aumenta">Aumentar fonte</button>
         <button id="diminui">Diminuir fonte</button>
         
-      </div>
+    </div>
 
     <script>
         var white = document.getElementById("white");
@@ -55,36 +55,35 @@
         var para = document.getElementById("para");
         var aumenta = document.getElementById("aumenta");
         var diminui = document.getElementById("diminui");
-        var paragraph = document.getElementById("para");
 
 
 
         //cor da fonte
         white.addEventListener("click", function() {
-        para.style.color = "white";
+            para.style.color = "white";
         });
         black.addEventListener("click", function() {
-        para.style.color = "black";
+            para.style.color = "black";
         });
 
 
         //cor do fundo
         whiteBackground.addEventListener("click", function() {
-        para.style.backgroundColor = "white";
+            para.style.backgroundColor = "white";
         });
         blackBackground.addEventListener("click", function() {
-        para.style.backgroundColor = "black";
+            para.style.backgroundColor = "black";
         });
 
 
 
         //tamanho fonte
         aumenta.addEventListener("click", function() {
-        var currentSize = parseInt(window.getComputedStyle(para).fontSize);
+            var currentSize = parseInt(window.getComputedStyle(para).fontSize);
         para.style.fontSize = (currentSize + 1) + "px";
         });
         diminui.addEventListener("click", function() {
-        var currentSize = parseInt(window.getComputedStyle(para).fontSize);
+            var currentSize = parseInt(window.getComputedStyle(para).fontSize);
         para.style.fontSize = (currentSize - 1) + "px";
         });
         

@@ -40,7 +40,7 @@
 
         <button id="white-background">Fundo Branco</button>
         <button id="black-background">Fundo Preto</button>
-      </div>
+    </div>
 
     <script>
         var white = document.getElementById("white");
@@ -49,21 +49,27 @@
         var blackBackground = document.getElementById("black-background");
         var para = document.getElementById("para");
 
+
+        
         white.addEventListener("click", function() {
-        para.style.color = "white";
+            para.style.color = "white";
         });
 
+
+
         black.addEventListener("click", function() {
-        para.style.color = "black";
+            para.style.color = "black";
         });
+
+
 
 
 
         whiteBackground.addEventListener("click", function() {
-        para.style.backgroundColor = "white";
+            para.style.backgroundColor = "white";
         });
         blackBackground.addEventListener("click", function() {
-        para.style.backgroundColor = "black";
+            para.style.backgroundColor = "black";
         });
 
 

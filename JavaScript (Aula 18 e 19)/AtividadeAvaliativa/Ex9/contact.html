@@ -16,47 +16,48 @@
     <link rel="stylesheet" href="form.css">
 
 <body>
-  <div class="form" id="form">
-    <div class="form-container">
-        <form method="post" onsubmit="return valida()">
 
-            <h2>Contact</h2>
-            
-            <label for="login">Login<span>*</span></label>
-            <input type="text" id="login" name="login" required>
+        <h1>coloquei a confirmacao na mesma pagina pois faz mais sentido, caso necessario ser feito de outra forma, trocar o alert por um link e mudar o return</h1>
+    <div class="form" id="form">
+        <div class="form-container">
+            <form method="post" onsubmit="return valida()">
 
-            <label for="password">Password<span>*</span></label>
-            <input type="password" id="password" name="password" minlength="6" maxlength="10" required>
-            <label for="confirm-password">Confirm Password<span>*</span></label>
+                <h2>Contact</h2>
+                
+                <label for="login">Login<span>*</span></label>
+                <input type="text" id="login" name="login" required>
 
-            <input type="password" id="confirm" name="confirm" minlength="6" maxlength="10" required>
-            <button type="submit">Confirm</button>
-        </form>
+                <label for="password">Password<span>*</span></label>
+                <input type="password" id="password" name="password" minlength="6" maxlength="10" required>
+                <label for="confirm-password">Confirm Password<span>*</span></label>
+
+                <input type="password" id="confirm" name="confirm" minlength="6" maxlength="10" required>
+                <button type="submit">Confirm</button>
+            </form>
+        </div>
     </div>
-</div>
 
-<script>
-    function valida() {
-        var login = document.getElementById("login").value;
-        var senha = document.getElementById("password").value;
-        var confirma = document.getElementById("confirm").value;
+    <script>
+        function valida() {
+            var login = document.getElementById("login").value;
+            var senha = document.getElementById("password").value;
+            var confirma = document.getElementById("confirm").value;
 
-        // Verifica se as senhas são iguais
-        if (senha != confirma) {
-            alert("As senhas não coincidem!");
+            // Verifica se as senhas são iguais
+            if (senha != confirma) {
+                alert("As senhas não coincidem!");
+                return false;
+            }
+
+            // Verifica se a senha possui entre 6 e 10
+            if (senha.length < 6 || senha.length > 10) {
+                alert("A senha deve possuir entre 6 e 10 caracteres!");
+                return false;
+            }
+
+            alert("Confirmado");
             return false;
         }
-
-        // Verifica se a senha possui entre 6 e 10
-        if (senha.length < 6 || senha.length > 10) {
-            alert("A senha deve possuir entre 6 e 10 caracteres!");
-            return false;
-        }
-
-        alert("Confirmado");
-        return false;
-    }
-</script>
-</script>
+    </script>
 </body>
 </html>
