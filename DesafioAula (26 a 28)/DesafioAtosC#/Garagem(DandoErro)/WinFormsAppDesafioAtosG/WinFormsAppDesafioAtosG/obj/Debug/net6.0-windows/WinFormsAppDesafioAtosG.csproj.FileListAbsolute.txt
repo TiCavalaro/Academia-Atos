@@ -1,0 +1,17 @@
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\obj\Debug\net6.0-windows\WinFormsAppDesafioAtosG.csproj.AssemblyReference.cache
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\obj\Debug\net6.0-windows\WinFormsAppDesafioAtosG.Form1.resources
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\obj\Debug\net6.0-windows\WinFormsAppDesafioAtosG.csproj.GenerateResource.cache
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\obj\Debug\net6.0-windows\WinFormsAppDesafioAtosG.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\obj\Debug\net6.0-windows\WinFormsAppDesafioAtosG.AssemblyInfoInputs.cache
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\obj\Debug\net6.0-windows\WinFormsAppDesafioAtosG.AssemblyInfo.cs
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\obj\Debug\net6.0-windows\WinFormsAppDesafioAtosG.csproj.CoreCompileInputs.cache
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\bin\Debug\net6.0-windows\WinFormsAppDesafioAtosG.exe
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\bin\Debug\net6.0-windows\WinFormsAppDesafioAtosG.deps.json
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\bin\Debug\net6.0-windows\WinFormsAppDesafioAtosG.runtimeconfig.json
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\bin\Debug\net6.0-windows\WinFormsAppDesafioAtosG.dll
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\bin\Debug\net6.0-windows\WinFormsAppDesafioAtosG.pdb
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\obj\Debug\net6.0-windows\WinFormsAppDesafioAtosG.dll
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\obj\Debug\net6.0-windows\refint\WinFormsAppDesafioAtosG.dll
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\obj\Debug\net6.0-windows\WinFormsAppDesafioAtosG.pdb
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\obj\Debug\net6.0-windows\WinFormsAppDesafioAtosG.genruntimeconfig.cache
+D:\Desktop\Pong\WinFormsAppDesafioAtosG\WinFormsAppDesafioAtosG\obj\Debug\net6.0-windows\ref\WinFormsAppDesafioAtosG.dll
