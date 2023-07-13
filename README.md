@@ -150,11 +150,72 @@ Repositório criado para armazenar anotações e exercícios desenvolvidos duran
 
 ### Aula 37 (31/maio)
 - ADO.NET
-- Windows Forms e conexão com o Banco de Dados
+    - Windows Forms e conexão com o Banco de Dados
 
-### Aula 38 (05/maio)
-- MVC
-    - Modelo MVC
+### Aula 38 (01/junho)
+- Continuação da aula sobre ADO.NET
+    - Data Reader
+
+### Aula 39 (02/junho)
+- Instalação dos componentes para desenvolvimento Xamarim
+- Primeiro Projeto Xamarin
+
+### Aula 40 (05/junho)
+- Aula sobre ASP.NET MVC
+
+### Aula 41 (06/junho)
+- Aula sobre Entity Framework
+- Code First
+
+### Aula 42 (07/junho)
+- Continuação sobre Entity Framework
+- Database First
+- Exercício de codefirst e dbfirst
+
+### Aula 43 (09/junho)
+- Entrega do projeto de Xamarin
+
+### Aula 44 (12/junho)
+- Aula sobre API
+    - API REST
+    - API RESTful
+    - Métodos HTTP e CRUD
+    - Swagger
+
+ ### Aula 45 (13/junho )
+ - Continuação da aula sobre API
+    - LazingLoad
+    - AsNoTracking
+
+### Aula 46 (14/junho)
+- 2º Atos Day
+- Consumir API em Console Application
+
+### Aula 47 (15/junho)
+- Explicação sobre o projeto final e cronograma das últimas atividades
+- PUT email na API
+- Continuação do consumo da API em Console Application
+
+### Aula 48 (16/junho)
+- Ideia inicial do projeto e planejamento
+
+### Aula 49 (19/junho)
+- Aula de introdução sobre Angular
+- Instalação do Angular
+- Consumo da API
+
+### Aula 50 (20/junho)
+- JWT Token
+
+### Aula 51 (21/junho)
+- Continuação sobre JWT Token
+- Padrões de Projeto (Singleton)
+
+### 22/junho - 04/julho - Desenvolvimento do Projeto Final
+
+### 05/julho - Apresentações dos Projetos Finais e Formatura.
+
+
 
 ## LINKS ÚTEIS
 
@@ -178,3 +239,5 @@ Repositório criado para armazenar anotações e exercícios desenvolvidos duran
 - [MDN Web Docs](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [List Classe](https://learn.microsoft.com/pt-br/dotnet/api/system.collections.generic.list-1?view=net-7.0)
 - [SQL Server connection strings](https://www.connectionstrings.com/sql-server/)
+- [Xamarin.Forms StackLayout](https://learn.microsoft.com/pt-br/xamarin/xamarin-forms/user-interface/layouts/stacklayout)
+- [C# em 5 minutos - Lambda Expressions](https://www.youtube.com/watch?v=Ftbrn82BPcc)
